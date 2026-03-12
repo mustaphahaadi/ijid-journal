@@ -468,28 +468,44 @@ a:hover {
 .header_area.header_on_primary .navbar .nav .nav-item .nav-link.dropdown-toggle,
 .header_area.header_on_primary .navbar-brand,
 .header_area.header_on_primary .navbar-brand .brand-mark {
-  color: rgba(255,255,255,0.88) !important;
+  color: var(--ijid-primary) !important;
+}
+
+.header_area.header_on_primary {
+  padding-top: 18px;
+}
+
+.header_area.header_on_primary .navbar {
+  background: #fff;
+  border-radius: 18px;
+  min-height: 76px;
+  padding: 0 24px;
+  box-shadow: 0 18px 38px rgba(0,35,71,0.16);
+}
+
+.header_area.header_on_primary .navbar .nav .nav-item .nav-link {
+  line-height: 76px;
 }
 
 .header_area.header_on_primary .nav-auth-btn .btn-login {
-  color: #fff;
-  border-color: rgba(255,255,255,0.9);
+  color: var(--ijid-primary);
+  border-color: var(--ijid-primary);
 }
 
 .header_area.header_on_primary .nav-auth-btn .btn-login:hover {
-  background: #fff;
-  color: var(--ijid-primary);
+  background: var(--ijid-primary);
+  color: #fff;
 }
 
 .header_area.header_on_primary .nav-auth-btn .btn-signup {
-  background: var(--ijid-secondary);
-  border-color: var(--ijid-secondary);
-  color: var(--ijid-primary);
+  background: var(--ijid-primary);
+  border-color: var(--ijid-primary);
+  color: #fff;
 }
 
 .header_area.header_on_primary .nav-auth-btn .btn-signup:hover {
-  background: #fff;
-  border-color: #fff;
+  background: var(--ijid-secondary);
+  border-color: var(--ijid-secondary);
   color: var(--ijid-primary);
 }
 
@@ -499,8 +515,8 @@ a:hover {
 }
 
 .header_area.header_on_primary .btn-journal-outline {
-  border-color: rgba(255,255,255,0.9);
-  color: #fff;
+  border-color: var(--ijid-primary);
+  color: var(--ijid-primary);
 }
 
 .header_area.header_on_primary .btn-journal-outline:hover {
@@ -509,7 +525,7 @@ a:hover {
 }
 
 .header_area.header_on_primary .navbar-toggler .icon-bar {
-  background: #fff;
+  background: var(--ijid-primary);
 }
 
 .header_area.header_on_primary .navbar .nav .nav-item.submenu ul .nav-item .nav-link {
@@ -521,13 +537,18 @@ a:hover {
 }
 
 .header_area.header_on_primary.navbar_fixed .main_menu {
-  background: var(--ijid-primary);
+  background: transparent;
+  box-shadow: none;
+}
+
+.header_area.header_on_primary.navbar_fixed .main_menu .navbar {
+  margin-top: 10px;
 }
 
 .header_area.header_on_primary.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link,
 .header_area.header_on_primary.navbar_fixed .main_menu .navbar-brand,
 .header_area.header_on_primary.navbar_fixed .main_menu .navbar-brand .brand-mark {
-  color: rgba(255,255,255,0.9) !important;
+  color: var(--ijid-primary) !important;
 }
 
 /* Auth Buttons in Nav */
