@@ -18,16 +18,16 @@
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid px-4">
             <a class="navbar-brand logo_h" href="index.html">
-              <strong style="font-size:24px;color:var(--ijid-primary);">IJID</strong>
+              <strong class="brand-mark">IJID</strong>
             </a>
             <div class="d-flex align-items-center ml-auto">
-              <div class="nav-notification" id="notifBell" style="cursor:pointer;">
-                <i class="ti-bell" style="font-size:18px;color:var(--ijid-primary);"></i>
+              <div class="nav-notification nav-icon-button" id="notifBell">
+                <i class="ti-bell nav-icon"></i>
                 <span class="badge-count">3</span>
               </div>
               <div class="dropdown ml-3">
-                <a class="dropdown-toggle d-flex align-items-center" href="#" role="button" data-toggle="dropdown" style="color:var(--ijid-primary);font-size:14px;">
-                  <img src="img/trainer/t1.jpg" alt="" style="width:35px;height:35px;border-radius:50%;margin-right:8px;object-fit:cover;" />
+                <a class="dropdown-toggle d-flex align-items-center profile-toggle" href="#" role="button" data-toggle="dropdown">
+                  <img src="img/trainer/t1.jpg" alt="" class="profile-avatar-sm" />
                   Dr. Jane Cooper
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
@@ -134,7 +134,7 @@
                     <input type="text" class="form-control" placeholder="Institution" value="MIT" />
                   </div>
                   <div class="col-md-1 d-flex align-items-center">
-                    <span class="badge badge-success" style="font-size:11px;">You</span>
+                    <span class="badge badge-success text-xxs">You</span>
                   </div>
                 </div>
               </div>
@@ -156,7 +156,7 @@
                 <div class="editor-area" id="abstractWrite">
                   <textarea id="abstractText" placeholder="Write your abstract here... Markdown is supported.&#10;&#10;Example:&#10;## Background&#10;This study examines...&#10;&#10;## Methods&#10;We employed...&#10;&#10;## Results&#10;Our findings show..." rows="10"></textarea>
                 </div>
-                <div class="editor-area" id="abstractPreview" style="display:none;">
+                <div class="editor-area hidden-panel" id="abstractPreview">
                   <div class="preview-content" id="abstractPreviewContent"></div>
                 </div>
               </div>
@@ -169,15 +169,15 @@
             <div class="dash-card-header"><h5>Manuscript Upload *</h5></div>
             <div class="dash-card-body">
               <div class="file-upload-area" id="manuscriptUpload">
-                <i class="ti-cloud-up" style="font-size:40px;color:var(--ijid-secondary);"></i>
+                <i class="ti-cloud-up upload-icon-lg"></i>
                 <h5>Drag & Drop your manuscript here</h5>
                 <p>or click to browse files</p>
-                <span class="text-muted" style="font-size:13px;">Accepted formats: PDF, DOCX, LaTeX (.tex) — Max 25MB</span>
-                <input type="file" id="manuscriptFile" accept=".pdf,.docx,.doc,.tex" style="display:none;" />
+                <span class="text-muted upload-note">Accepted formats: PDF, DOCX, LaTeX (.tex) — Max 25MB</span>
+                <input type="file" id="manuscriptFile" class="hidden-panel" accept=".pdf,.docx,.doc,.tex" />
               </div>
-              <div id="manuscriptFileInfo" class="mt-2" style="display:none;">
-                <div class="d-flex align-items-center p-2" style="background:#f8f9fa;border-radius:6px;">
-                  <i class="ti-file mr-2" style="color:var(--ijid-primary);"></i>
+              <div id="manuscriptFileInfo" class="mt-2 hidden-panel">
+                <div class="d-flex align-items-center p-2 file-chip">
+                  <i class="ti-file mr-2 file-chip-icon"></i>
                   <span id="manuscriptFileName" class="mr-3"></span>
                   <span id="manuscriptFileSize" class="text-muted mr-auto"></span>
                   <button type="button" class="btn btn-sm btn-link text-danger" id="removeManuscript"><i class="ti-close"></i></button>
@@ -191,11 +191,11 @@
             <div class="dash-card-header"><h5>Supplementary Files (Optional)</h5></div>
             <div class="dash-card-body">
               <div class="file-upload-area" id="supplementaryUpload">
-                <i class="ti-gallery" style="font-size:35px;color:var(--ijid-secondary);"></i>
+                <i class="ti-gallery upload-icon-md"></i>
                 <h5>Upload supplementary materials</h5>
                 <p>Figures, datasets, code, or additional documents</p>
-                <span class="text-muted" style="font-size:13px;">Accepted: PDF, DOCX, PNG, JPG, ZIP, CSV — Max 50MB total</span>
-                <input type="file" id="supplementaryFiles" multiple style="display:none;" />
+                <span class="text-muted upload-note">Accepted: PDF, DOCX, PNG, JPG, ZIP, CSV — Max 50MB total</span>
+                <input type="file" id="supplementaryFiles" class="hidden-panel" multiple />
               </div>
               <div id="supplementaryFilesList" class="mt-2"></div>
             </div>

@@ -80,6 +80,14 @@ a:hover {
   font-size: 13px;
 }
 
+.text-xxs {
+  font-size: 11px;
+}
+
+.hidden-panel {
+  display: none;
+}
+
 .table-scroll {
   overflow-x: auto;
 }
@@ -111,6 +119,14 @@ a:hover {
 
 .page-section {
   padding: 80px 0;
+}
+
+.section-bg-white {
+  background: #fff;
+}
+
+.section-bg-light {
+  background: var(--ijid-light);
 }
 
 .section-title-primary {
@@ -257,6 +273,62 @@ a:hover {
   border-radius: 0 8px 8px 0;
   padding: 0 30px;
   white-space: nowrap;
+}
+
+.auth-card-narrow {
+  max-width: 520px;
+}
+
+.hero-kicker {
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.link-accent {
+  color: var(--ijid-secondary);
+}
+
+.upload-icon-lg {
+  font-size: 40px;
+  color: var(--ijid-secondary);
+}
+
+.upload-icon-md {
+  font-size: 35px;
+  color: var(--ijid-secondary);
+}
+
+.upload-note {
+  font-size: 13px;
+}
+
+.file-chip {
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.file-chip-icon {
+  color: var(--ijid-primary);
+}
+
+.cta-band {
+  background: var(--ijid-primary);
+  padding: 80px 0;
+}
+
+.cta-title {
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.cta-copy {
+  color: rgba(255,255,255,0.82);
+  font-size: 16px;
+  margin-bottom: 0;
 }
 
 .paper-link-plain {
