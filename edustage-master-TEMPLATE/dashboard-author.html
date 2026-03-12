@@ -18,17 +18,17 @@
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid px-4">
             <a class="navbar-brand logo_h" href="index.html">
-              <strong style="font-size:24px;color:var(--ijid-primary);">IJID</strong>
+              <strong class="brand-mark">IJID</strong>
             </a>
             <div class="d-flex align-items-center ml-auto">
               <!-- Notifications -->
-              <div class="nav-notification" id="notifBell" style="cursor:pointer;">
-                <i class="ti-bell" style="font-size:18px;color:var(--ijid-primary);"></i>
+              <div class="nav-notification nav-icon-button" id="notifBell">
+                <i class="ti-bell nav-icon"></i>
                 <span class="badge-count">3</span>
                 <div class="notifications-dropdown" id="notifDropdown">
                   <div class="notif-header">
                     <h6>Notifications</h6>
-                    <a href="#" style="font-size:12px;color:var(--ijid-secondary);">Mark all read</a>
+                    <a href="#" class="small-link">Mark all read</a>
                   </div>
                   <div class="notif-list">
                     <div class="notif-item unread">
@@ -57,8 +57,8 @@
               </div>
               <!-- User -->
               <div class="dropdown ml-3">
-                <a class="dropdown-toggle d-flex align-items-center" href="#" role="button" data-toggle="dropdown" style="color:var(--ijid-primary);font-size:14px;">
-                  <img src="img/trainer/t1.jpg" alt="" style="width:35px;height:35px;border-radius:50%;margin-right:8px;object-fit:cover;" />
+                <a class="dropdown-toggle d-flex align-items-center profile-toggle" href="#" role="button" data-toggle="dropdown">
+                  <img src="img/trainer/t1.jpg" alt="" class="profile-avatar-sm" />
                   Dr. Sarah Chen
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
@@ -142,7 +142,7 @@
             <h5>My Submissions</h5>
             <a href="submit-paper.html" class="btn-journal btn-sm-journal"><i class="ti-plus mr-1"></i> New Submission</a>
           </div>
-          <div class="dash-card-body" style="overflow-x:auto;">
+          <div class="dash-card-body table-scroll">
             <table class="submission-table">
               <thead>
                 <tr>
@@ -245,30 +245,30 @@
                 <h5>Upcoming Deadlines</h5>
               </div>
               <div class="dash-card-body">
-                <div class="d-flex align-items-center p-2 mb-3" style="background:var(--ijid-light);border-radius:8px;">
-                  <div class="stat-icon bg-danger-light mr-3" style="width:45px;height:45px;min-width:45px;font-size:16px;">
+                <div class="d-flex align-items-center p-2 mb-3 surface-muted">
+                  <div class="stat-icon bg-danger-light mr-3 mini-stat-icon">
                     <i class="ti-alarm-clock"></i>
                   </div>
                   <div>
-                    <h6 class="mb-0" style="font-size:14px;">Revision Due</h6>
-                    <small class="text-muted">Privacy-Preserving FL... &bull; <strong style="color:var(--ijid-accent);">Mar 20, 2026</strong></small>
+                    <h6 class="mb-0 mini-heading">Revision Due</h6>
+                    <small class="text-muted">Privacy-Preserving FL... &bull; <strong class="text-deadline">Mar 20, 2026</strong></small>
                   </div>
                 </div>
-                <div class="d-flex align-items-center p-2 mb-3" style="background:var(--ijid-light);border-radius:8px;">
-                  <div class="stat-icon bg-warning-light mr-3" style="width:45px;height:45px;min-width:45px;font-size:16px;">
+                <div class="d-flex align-items-center p-2 mb-3 surface-muted">
+                  <div class="stat-icon bg-warning-light mr-3 mini-stat-icon">
                     <i class="ti-calendar"></i>
                   </div>
                   <div>
-                    <h6 class="mb-0" style="font-size:14px;">Special Issue Deadline</h6>
+                    <h6 class="mb-0 mini-heading">Special Issue Deadline</h6>
                     <small class="text-muted">AI and Society &bull; Jun 30, 2026</small>
                   </div>
                 </div>
-                <div class="d-flex align-items-center p-2" style="background:var(--ijid-light);border-radius:8px;">
-                  <div class="stat-icon bg-primary-light mr-3" style="width:45px;height:45px;min-width:45px;font-size:16px;">
+                <div class="d-flex align-items-center p-2 surface-muted">
+                  <div class="stat-icon bg-primary-light mr-3 mini-stat-icon">
                     <i class="ti-write"></i>
                   </div>
                   <div>
-                    <h6 class="mb-0" style="font-size:14px;">Camera-Ready Version</h6>
+                    <h6 class="mb-0 mini-heading">Camera-Ready Version</h6>
                     <small class="text-muted">Transformer Architecture... &bull; Apr 15, 2026</small>
                   </div>
                 </div>

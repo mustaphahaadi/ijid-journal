@@ -18,16 +18,16 @@
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid px-4">
             <a class="navbar-brand logo_h" href="index.html">
-              <strong style="font-size:24px;color:var(--ijid-primary);">IJID</strong>
+              <strong class="brand-mark">IJID</strong>
             </a>
             <div class="d-flex align-items-center ml-auto">
-              <div class="nav-notification" id="notifBell" style="cursor:pointer;">
-                <i class="ti-bell" style="font-size:18px;color:var(--ijid-primary);"></i>
+              <div class="nav-notification nav-icon-button" id="notifBell">
+                <i class="ti-bell nav-icon"></i>
                 <span class="badge-count">12</span>
               </div>
               <div class="dropdown ml-3">
-                <a class="dropdown-toggle d-flex align-items-center" href="#" role="button" data-toggle="dropdown" style="color:var(--ijid-primary);font-size:14px;">
-                  <img src="img/trainer/t3.jpg" alt="" style="width:35px;height:35px;border-radius:50%;margin-right:8px;object-fit:cover;" />
+                <a class="dropdown-toggle d-flex align-items-center profile-toggle" href="#" role="button" data-toggle="dropdown">
+                  <img src="img/trainer/t3.jpg" alt="" class="profile-avatar-sm" />
                   Prof. H. Rahman
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
@@ -117,7 +117,7 @@
           </div>
           <div class="col-lg-3 col-md-6">
             <div class="stat-card">
-              <div class="stat-icon" style="background:#e8f0fe;color:var(--ijid-secondary);"><i class="ti-user"></i></div>
+              <div class="stat-icon bg-info-light"><i class="ti-user"></i></div>
               <div class="stat-info">
                 <h3>312</h3>
                 <p>Registered Users</p>
@@ -126,7 +126,7 @@
           </div>
           <div class="col-lg-3 col-md-6">
             <div class="stat-card">
-              <div class="stat-icon" style="background:#fef3e0;color:#e67e22;"><i class="ti-pencil-alt"></i></div>
+              <div class="stat-icon bg-secondary-soft"><i class="ti-pencil-alt"></i></div>
               <div class="stat-info">
                 <h3>45</h3>
                 <p>Active Reviewers</p>
@@ -135,7 +135,7 @@
           </div>
           <div class="col-lg-3 col-md-6">
             <div class="stat-card">
-              <div class="stat-icon" style="background:#e8f5e9;color:#27ae60;"><i class="ti-flag-alt"></i></div>
+              <div class="stat-icon bg-success-soft"><i class="ti-flag-alt"></i></div>
               <div class="stat-info">
                 <h3>3.2</h3>
                 <p>Impact Factor</p>
@@ -150,7 +150,7 @@
             <h5>Submissions Awaiting Reviewer Assignment</h5>
             <a href="#" class="btn-journal-outline btn-sm-journal">View All</a>
           </div>
-          <div class="dash-card-body" style="overflow-x:auto;">
+          <div class="dash-card-body table-scroll">
             <table class="submission-table">
               <thead>
                 <tr>
@@ -213,7 +213,7 @@
           <div class="dash-card-header">
             <h5>All Submissions Overview</h5>
             <div>
-              <select class="form-control form-control-sm d-inline-block" style="width:auto;">
+              <select class="form-control form-control-sm d-inline-block select-auto">
                 <option>All Status</option>
                 <option>Submitted</option>
                 <option>Under Review</option>
@@ -224,7 +224,7 @@
               </select>
             </div>
           </div>
-          <div class="dash-card-body" style="overflow-x:auto;">
+          <div class="dash-card-body table-scroll">
             <table class="submission-table">
               <thead>
                 <tr>
@@ -305,7 +305,7 @@
             <h5>Recently Registered Users</h5>
             <a href="#" class="btn-journal-outline btn-sm-journal">Manage All Users</a>
           </div>
-          <div class="dash-card-body" style="overflow-x:auto;">
+          <div class="dash-card-body table-scroll">
             <table class="submission-table">
               <thead>
                 <tr>
@@ -324,7 +324,7 @@
                   <td>Mar 14, 2026</td>
                   <td>
                     <a href="#" class="btn-journal-outline btn-sm-journal">View</a>
-                    <a href="#" class="btn-sm-journal" style="color:var(--ijid-accent);margin-left:4px;">Disable</a>
+                    <a href="#" class="btn-sm-journal action-link-danger">Disable</a>
                   </td>
                 </tr>
                 <tr>
@@ -334,7 +334,7 @@
                   <td>Mar 13, 2026</td>
                   <td>
                     <a href="#" class="btn-journal-outline btn-sm-journal">View</a>
-                    <a href="#" class="btn-sm-journal" style="color:var(--ijid-accent);margin-left:4px;">Disable</a>
+                    <a href="#" class="btn-sm-journal action-link-danger">Disable</a>
                   </td>
                 </tr>
                 <tr>
@@ -344,7 +344,7 @@
                   <td>Mar 12, 2026</td>
                   <td>
                     <a href="#" class="btn-journal-outline btn-sm-journal">View</a>
-                    <a href="#" class="btn-sm-journal" style="color:var(--ijid-accent);margin-left:4px;">Disable</a>
+                    <a href="#" class="btn-sm-journal action-link-danger">Disable</a>
                   </td>
                 </tr>
               </tbody>
@@ -359,8 +359,8 @@
     <div class="modal fade" id="assignModal" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header" style="border-bottom:2px solid var(--ijid-primary);">
-            <h5 class="modal-title" style="color:var(--ijid-primary);">Assign Reviewer</h5>
+          <div class="modal-header modal-header-primary">
+            <h5 class="modal-title modal-title-primary">Assign Reviewer</h5>
             <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
           </div>
           <div class="modal-body">

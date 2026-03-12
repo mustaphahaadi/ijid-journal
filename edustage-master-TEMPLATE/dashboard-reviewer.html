@@ -18,16 +18,16 @@
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid px-4">
             <a class="navbar-brand logo_h" href="index.html">
-              <strong style="font-size:24px;color:var(--ijid-primary);">IJID</strong>
+              <strong class="brand-mark">IJID</strong>
             </a>
             <div class="d-flex align-items-center ml-auto">
-              <div class="nav-notification" id="notifBell" style="cursor:pointer;">
-                <i class="ti-bell" style="font-size:18px;color:var(--ijid-primary);"></i>
+              <div class="nav-notification nav-icon-button" id="notifBell">
+                <i class="ti-bell nav-icon"></i>
                 <span class="badge-count">5</span>
               </div>
               <div class="dropdown ml-3">
-                <a class="dropdown-toggle d-flex align-items-center" href="#" role="button" data-toggle="dropdown" style="color:var(--ijid-primary);font-size:14px;">
-                  <img src="img/trainer/t2.jpg" alt="" style="width:35px;height:35px;border-radius:50%;margin-right:8px;object-fit:cover;" />
+                <a class="dropdown-toggle d-flex align-items-center profile-toggle" href="#" role="button" data-toggle="dropdown">
+                  <img src="img/trainer/t2.jpg" alt="" class="profile-avatar-sm" />
                   Dr. Amara Singh
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
@@ -108,7 +108,7 @@
           <div class="dash-card-header">
             <h5>Assigned Papers — Pending Review</h5>
           </div>
-          <div class="dash-card-body" style="overflow-x:auto;">
+          <div class="dash-card-body table-scroll">
             <table class="submission-table">
               <thead>
                 <tr>
@@ -126,7 +126,7 @@
                   <td><a href="review-paper.html" class="paper-title-link">Transformer Architecture for Code Generation Tasks</a></td>
                   <td>S. Chen et al.</td>
                   <td>Feb 25, 2026</td>
-                  <td><span style="color:var(--ijid-accent);font-weight:500;">Mar 15, 2026</span></td>
+                  <td><span class="text-deadline">Mar 15, 2026</span></td>
                   <td><a href="review-paper.html" class="btn-journal btn-sm-journal">Review</a></td>
                 </tr>
                 <tr>
@@ -163,7 +163,7 @@
           <div class="dash-card-header">
             <h5>Recent Completed Reviews</h5>
           </div>
-          <div class="dash-card-body" style="overflow-x:auto;">
+          <div class="dash-card-body table-scroll">
             <table class="submission-table">
               <thead>
                 <tr>

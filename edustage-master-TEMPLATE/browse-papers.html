@@ -13,12 +13,12 @@
   </head>
   <body>
     <!--================ Header =================-->
-    <header class="header_area navbar_fixed">
+    <header class="header_area navbar_fixed header_on_primary">
       <div class="main_menu">
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container">
             <a class="navbar-brand logo_h" href="index.html">
-              <strong style="font-size:24px;color:var(--ijid-primary);">IJID</strong>
+              <strong class="brand-mark brand-mark-light">IJID</strong>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
               <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
@@ -48,21 +48,21 @@
     </header>
 
     <!--================ Page Header =================-->
-    <section class="page-header" style="background:var(--ijid-primary);padding:140px 0 60px;color:#fff;">
+    <section class="page-header">
       <div class="container">
         <h2>Browse Published Papers</h2>
-        <p style="opacity:0.9;">Explore peer-reviewed research across all disciplines</p>
+        <p class="page-header-subtitle">Explore peer-reviewed research across all disciplines</p>
       </div>
     </section>
 
     <!--================ Browse Area =================-->
-    <section class="browse-area" style="padding:60px 0;">
+    <section class="browse-area">
       <div class="container">
         <!-- Search Box -->
         <div class="search-box-lg mb-5">
           <form class="d-flex">
-            <input type="text" class="form-control form-control-lg" placeholder="Search papers by title, author, keyword, or DOI..." style="border-radius:8px 0 0 8px;border:2px solid var(--ijid-primary);border-right:none;" />
-            <button class="btn-journal" type="submit" style="border-radius:0 8px 8px 0;padding:0 30px;white-space:nowrap;">
+            <input type="text" class="form-control form-control-lg search-input-solid" placeholder="Search papers by title, author, keyword, or DOI..." />
+            <button class="btn-journal search-submit-btn" type="submit">
               <i class="ti-search"></i> Search
             </button>
           </form>
@@ -72,7 +72,7 @@
           <!-- Filter Sidebar -->
           <div class="col-lg-3">
             <div class="filter-sidebar">
-              <h5 class="mb-4" style="color:var(--ijid-primary);">Filter Results</h5>
+              <h5 class="mb-4 section-title-primary">Filter Results</h5>
 
               <div class="filter-group mb-4">
                 <h6>Category</h6>
@@ -112,8 +112,8 @@
                 </select>
               </div>
 
-              <button class="btn-journal btn-block" style="font-size:14px;">Apply Filters</button>
-              <button class="btn-journal-outline btn-block mt-2" style="font-size:14px;">Clear All</button>
+              <button class="btn-journal btn-block btn-text-sm">Apply Filters</button>
+              <button class="btn-journal-outline btn-block mt-2 btn-text-sm">Clear All</button>
             </div>
           </div>
 
@@ -127,7 +127,7 @@
             <div class="paper-card mb-4">
               <div class="paper-card-body">
                 <span class="paper-category">Artificial Intelligence</span>
-                <h5><a href="paper-view.html" style="color:var(--ijid-primary);">Transformer Architecture for Code Generation Tasks</a></h5>
+                <h5><a href="paper-view.html" class="paper-link-plain">Transformer Architecture for Code Generation Tasks</a></h5>
                 <p class="paper-authors"><i class="ti-user"></i> S. Chen, W. Liu, T. Park &nbsp;|&nbsp; Stanford University</p>
                 <p class="paper-abstract">This paper presents a novel transformer-based architecture optimized for automated code generation tasks. We introduce CodeFormer, leveraging hierarchical attention mechanisms and syntax-aware positional encodings to generate syntactically correct code from natural language descriptions...</p>
                 <div class="paper-meta d-flex flex-wrap align-items-center">
@@ -149,7 +149,7 @@
             <div class="paper-card mb-4">
               <div class="paper-card-body">
                 <span class="paper-category">Machine Learning</span>
-                <h5><a href="paper-view.html" style="color:var(--ijid-primary);">Federated Learning with Differential Privacy for Healthcare Data</a></h5>
+                <h5><a href="paper-view.html" class="paper-link-plain">Federated Learning with Differential Privacy for Healthcare Data</a></h5>
                 <p class="paper-authors"><i class="ti-user"></i> M. Johnson, A. Williams &nbsp;|&nbsp; Johns Hopkins University</p>
                 <p class="paper-abstract">We propose a federated learning framework enhanced with differential privacy guarantees for training machine learning models on sensitive healthcare data distributed across multiple hospitals without centralizing patient records...</p>
                 <div class="paper-meta d-flex flex-wrap align-items-center">
@@ -170,7 +170,7 @@
             <div class="paper-card mb-4">
               <div class="paper-card-body">
                 <span class="paper-category">Cybersecurity</span>
-                <h5><a href="paper-view.html" style="color:var(--ijid-primary);">Zero-Trust Security Architecture for Cloud-Native Microservices</a></h5>
+                <h5><a href="paper-view.html" class="paper-link-plain">Zero-Trust Security Architecture for Cloud-Native Microservices</a></h5>
                 <p class="paper-authors"><i class="ti-user"></i> A. Okafor, B. Lee &nbsp;|&nbsp; Carnegie Mellon University</p>
                 <p class="paper-abstract">This research introduces a comprehensive zero-trust security framework designed specifically for cloud-native microservice architectures. We address the challenges of service-to-service authentication, dynamic policy enforcement, and real-time threat detection...</p>
                 <div class="paper-meta d-flex flex-wrap align-items-center">
@@ -191,7 +191,7 @@
             <div class="paper-card mb-4">
               <div class="paper-card-body">
                 <span class="paper-category">Data Science</span>
-                <h5><a href="paper-view.html" style="color:var(--ijid-primary);">Causal Inference Methods for Observational Health Studies: A Comparative Analysis</a></h5>
+                <h5><a href="paper-view.html" class="paper-link-plain">Causal Inference Methods for Observational Health Studies: A Comparative Analysis</a></h5>
                 <p class="paper-authors"><i class="ti-user"></i> R. Patel, N. Yamamoto, C. Dubois &nbsp;|&nbsp; University of Oxford</p>
                 <p class="paper-abstract">We conduct a comprehensive comparative analysis of modern causal inference methods applied to large-scale observational health studies, evaluating propensity score matching, instrumental variables, regression discontinuity, and double machine learning approaches...</p>
                 <div class="paper-meta d-flex flex-wrap align-items-center">
@@ -212,7 +212,7 @@
             <div class="paper-card mb-4">
               <div class="paper-card-body">
                 <span class="paper-category">IoT &amp; Edge Computing</span>
-                <h5><a href="paper-view.html" style="color:var(--ijid-primary);">Edge Computing Architectures for Real-Time IoT Analytics in Smart Cities</a></h5>
+                <h5><a href="paper-view.html" class="paper-link-plain">Edge Computing Architectures for Real-Time IoT Analytics in Smart Cities</a></h5>
                 <p class="paper-authors"><i class="ti-user"></i> W. Thompson &nbsp;|&nbsp; ETH Zurich</p>
                 <p class="paper-abstract">This paper proposes a hierarchical edge computing architecture optimized for real-time analytics in smart city IoT deployments. We demonstrate how task offloading and model partitioning strategies can reduce end-to-end latency by 62%...</p>
                 <div class="paper-meta d-flex flex-wrap align-items-center">
@@ -233,7 +233,7 @@
             <div class="paper-card mb-4">
               <div class="paper-card-body">
                 <span class="paper-category">Quantum Computing</span>
-                <h5><a href="paper-view.html" style="color:var(--ijid-primary);">Quantum Error Correction Techniques for NISQ-era Processors</a></h5>
+                <h5><a href="paper-view.html" class="paper-link-plain">Quantum Error Correction Techniques for NISQ-era Processors</a></h5>
                 <p class="paper-authors"><i class="ti-user"></i> K. Weber, H. Nakamura &nbsp;|&nbsp; Max Planck Institute</p>
                 <p class="paper-abstract">We survey and benchmark five leading quantum error correction techniques suitable for near-term noisy intermediate-scale quantum processors, providing practical implementation guidelines and performance comparisons on IBM and Google quantum hardware...</p>
                 <div class="paper-meta d-flex flex-wrap align-items-center">
@@ -254,7 +254,7 @@
             <nav class="mt-4">
               <ul class="pagination justify-content-center">
                 <li class="page-item disabled"><a class="page-link" href="#">&laquo; Previous</a></li>
-                <li class="page-item active"><a class="page-link" href="#" style="background:var(--ijid-primary);border-color:var(--ijid-primary);">1</a></li>
+                <li class="page-item active"><a class="page-link page-link-primary" href="#">1</a></li>
                 <li class="page-item"><a class="page-link" href="#">2</a></li>
                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                 <li class="page-item"><a class="page-link" href="#">...</a></li>
@@ -269,15 +269,15 @@
     </section>
 
     <!--================ Footer =================-->
-    <footer style="background:var(--ijid-primary);padding:40px 0 20px;color:rgba(255,255,255,0.8);">
+    <footer class="footer-simple">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <h5 style="color:#fff;">IJID — International Journal of Innovative Discoveries</h5>
-            <p style="font-size:14px;">ISSN: 2026-XXXX &nbsp;|&nbsp; Open Access &nbsp;|&nbsp; Peer Reviewed</p>
+            <h5>IJID — International Journal of Innovative Discoveries</h5>
+            <p class="footer-text-sm">ISSN: 2026-XXXX &nbsp;|&nbsp; Open Access &nbsp;|&nbsp; Peer Reviewed</p>
           </div>
           <div class="col-md-6 text-md-right">
-            <p style="font-size:14px;">&copy; 2026 IJID. All rights reserved.</p>
+            <p class="footer-text-sm">&copy; 2026 IJID. All rights reserved.</p>
           </div>
         </div>
       </div>

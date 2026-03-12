@@ -13,12 +13,12 @@
   </head>
   <body>
     <!--================ Header =================-->
-    <header class="header_area navbar_fixed">
+    <header class="header_area navbar_fixed header_on_primary">
       <div class="main_menu">
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container">
             <a class="navbar-brand logo_h" href="index.html">
-              <strong style="font-size:24px;color:var(--ijid-primary);">IJID</strong>
+              <strong class="brand-mark brand-mark-light">IJID</strong>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
               <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
@@ -48,22 +48,22 @@
     </header>
 
     <!--================ Page Header =================-->
-    <section class="page-header" style="background:var(--ijid-primary);padding:140px 0 50px;color:#fff;">
+    <section class="page-header">
       <div class="container">
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb" style="background:none;padding:0;">
-            <li class="breadcrumb-item"><a href="index.html" style="color:rgba(255,255,255,0.8);">Home</a></li>
-            <li class="breadcrumb-item"><a href="browse-papers.html" style="color:rgba(255,255,255,0.8);">Browse Papers</a></li>
-            <li class="breadcrumb-item active" style="color:#fff;">Paper View</li>
+          <ol class="breadcrumb breadcrumb-clean">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="browse-papers.html">Browse Papers</a></li>
+            <li class="breadcrumb-item active">Paper View</li>
           </ol>
         </nav>
-        <span class="badge badge-light mb-2" style="font-size:12px;">Artificial Intelligence</span>
-        <h2 style="font-size:28px;">Transformer Architecture for Code Generation Tasks</h2>
+        <span class="badge badge-light mb-2 badge-compact">Artificial Intelligence</span>
+        <h2>Transformer Architecture for Code Generation Tasks</h2>
       </div>
     </section>
 
     <!--================ Paper View =================-->
-    <section class="paper-view-area" style="padding:60px 0;">
+    <section class="paper-view-area">
       <div class="container">
         <div class="row">
           <!-- Main Content -->
@@ -71,12 +71,12 @@
             <div class="paper-content-card">
               <!-- Authors -->
               <div class="mb-4">
-                <h6 style="color:var(--ijid-primary);margin-bottom:12px;">Authors</h6>
+                <h6 class="section-title-sm">Authors</h6>
                 <div class="d-flex flex-wrap">
                   <div class="mr-4 mb-2">
                     <strong>Shuang Chen</strong><br />
                     <small class="text-muted">Stanford University, Department of Computer Science</small><br />
-                    <small><a href="#" style="color:var(--ijid-secondary);">s.chen@stanford.edu</a></small>
+                    <small><a href="#" class="paper-link-plain">s.chen@stanford.edu</a></small>
                   </div>
                   <div class="mr-4 mb-2">
                     <strong>Wei Liu</strong><br />
@@ -90,21 +90,21 @@
               </div>
 
               <!-- Abstract -->
-              <div class="mb-4" style="padding:20px;background:#f8f9fc;border-radius:8px;border-left:4px solid var(--ijid-primary);">
-                <h6 style="color:var(--ijid-primary);margin-bottom:10px;">Abstract</h6>
-                <p style="font-size:14px;line-height:1.8;color:#444;">
+              <div class="mb-4 abstract-panel">
+                <h6 class="section-title-sm">Abstract</h6>
+                <p class="body-copy-sm">
                   This paper presents a novel transformer-based architecture optimized for automated code generation tasks across multiple programming languages. We introduce CodeFormer, a model that leverages hierarchical attention mechanisms and syntax-aware positional encodings to generate syntactically correct and semantically meaningful code from natural language descriptions. Our experiments on the HumanEval benchmark demonstrate a 15.3% improvement over existing state-of-the-art methods, with particularly strong performance on complex multi-step programming tasks. We also introduce a new evaluation metric, Semantic Correctness Score (SCS), which better captures the functional equivalence of generated code. Extensive ablation studies validate the contribution of each proposed component, and we release our model weights and evaluation framework as open-source resources.
                 </p>
               </div>
 
               <!-- Keywords -->
               <div class="mb-4">
-                <h6 style="color:var(--ijid-primary);margin-bottom:10px;">Keywords</h6>
-                <span class="badge badge-light mr-1 mb-1" style="font-size:12px;padding:6px 14px;">Transformer</span>
-                <span class="badge badge-light mr-1 mb-1" style="font-size:12px;padding:6px 14px;">Code Generation</span>
-                <span class="badge badge-light mr-1 mb-1" style="font-size:12px;padding:6px 14px;">Natural Language Processing</span>
-                <span class="badge badge-light mr-1 mb-1" style="font-size:12px;padding:6px 14px;">Deep Learning</span>
-                <span class="badge badge-light mr-1 mb-1" style="font-size:12px;padding:6px 14px;">Program Synthesis</span>
+                <h6 class="section-title-sm">Keywords</h6>
+                <span class="badge badge-light mr-1 mb-1 badge-compact">Transformer</span>
+                <span class="badge badge-light mr-1 mb-1 badge-compact">Code Generation</span>
+                <span class="badge badge-light mr-1 mb-1 badge-compact">Natural Language Processing</span>
+                <span class="badge badge-light mr-1 mb-1 badge-compact">Deep Learning</span>
+                <span class="badge badge-light mr-1 mb-1 badge-compact">Program Synthesis</span>
               </div>
 
               <!-- Full Paper Content (simulated) -->
@@ -132,7 +132,7 @@
               <div class="paper-section mb-4">
                 <h5>4. Experiments & Results</h5>
                 <p>We evaluate CodeFormer on the HumanEval benchmark, MBPP, and our newly introduced MultiLang-Eval dataset. Our model achieves a pass@1 rate of 78.2% on HumanEval, representing a 15.3% improvement over the previous state-of-the-art (Codex, 67.8%). On complex multi-step tasks, the improvement is even more pronounced at 22.1%.</p>
-                <div class="text-center my-4 p-4" style="background:#f8f9fc;border-radius:8px;">
+                <div class="text-center my-4 p-4 surface-muted">
                   <p class="text-muted mb-0"><em>[Table 1: Comparison of CodeFormer with baseline models on HumanEval, MBPP, and MultiLang-Eval benchmarks]</em></p>
                 </div>
               </div>
@@ -144,7 +144,7 @@
 
               <div class="paper-section mb-4">
                 <h5>References</h5>
-                <div style="font-size:13px;line-height:1.8;color:#555;">
+                <div class="fine-print">
                   <p>[1] Chen, M., et al. (2021). "Evaluating Large Language Models Trained on Code." <em>arXiv preprint arXiv:2107.03374</em>.</p>
                   <p>[2] Nijkamp, E., et al. (2022). "CodeGen: An Open Large Language Model for Code with Multi-Turn Program Synthesis." <em>ICLR 2023</em>.</p>
                   <p>[3] Li, Y., et al. (2022). "Competition-Level Code Generation with AlphaCode." <em>Science, 378(6624)</em>, pp.1092-1097.</p>
@@ -158,10 +158,10 @@
           <!-- Sidebar -->
           <div class="col-lg-4">
             <div class="paper-sidebar-card mb-4">
-              <h6 style="color:var(--ijid-primary);margin-bottom:15px;">Paper Information</h6>
-              <ul style="list-style:none;padding:0;font-size:14px;">
+              <h6 class="section-title-primary">Paper Information</h6>
+              <ul class="list-plain info-list-compact">
                 <li class="mb-2"><strong>Paper ID:</strong> #IJID-2026-0078</li>
-                <li class="mb-2"><strong>DOI:</strong> <a href="#" style="color:var(--ijid-secondary);">10.1234/ijid.2026.0078</a></li>
+                <li class="mb-2"><strong>DOI:</strong> <a href="#" class="paper-link-plain">10.1234/ijid.2026.0078</a></li>
                 <li class="mb-2"><strong>Published:</strong> March 10, 2026</li>
                 <li class="mb-2"><strong>Received:</strong> February 20, 2026</li>
                 <li class="mb-2"><strong>Accepted:</strong> March 8, 2026</li>
@@ -174,32 +174,32 @@
             </div>
 
             <div class="paper-sidebar-card mb-4">
-              <h6 style="color:var(--ijid-primary);margin-bottom:15px;">Metrics</h6>
+              <h6 class="section-title-primary">Metrics</h6>
               <div class="row text-center">
                 <div class="col-4">
-                  <h4 style="color:var(--ijid-primary);margin-bottom:2px;">1,245</h4>
+                  <h4 class="metric-number">1,245</h4>
                   <small class="text-muted">Views</small>
                 </div>
                 <div class="col-4">
-                  <h4 style="color:var(--ijid-primary);margin-bottom:2px;">342</h4>
+                  <h4 class="metric-number">342</h4>
                   <small class="text-muted">Downloads</small>
                 </div>
                 <div class="col-4">
-                  <h4 style="color:var(--ijid-primary);margin-bottom:2px;">8</h4>
+                  <h4 class="metric-number">8</h4>
                   <small class="text-muted">Citations</small>
                 </div>
               </div>
             </div>
 
             <div class="paper-sidebar-card mb-4">
-              <h6 style="color:var(--ijid-primary);margin-bottom:15px;">Download</h6>
-              <a href="#" class="btn-journal btn-block mb-2" style="font-size:14px;"><i class="ti-download"></i> Download PDF</a>
-              <a href="#" class="btn-journal-outline btn-block" style="font-size:14px;"><i class="ti-files"></i> Supplementary Files</a>
+              <h6 class="section-title-primary">Download</h6>
+              <a href="#" class="btn-journal btn-block mb-2 btn-text-sm"><i class="ti-download"></i> Download PDF</a>
+              <a href="#" class="btn-journal-outline btn-block btn-text-sm"><i class="ti-files"></i> Supplementary Files</a>
             </div>
 
             <!-- Citation Box -->
             <div class="paper-sidebar-card mb-4">
-              <h6 style="color:var(--ijid-primary);margin-bottom:15px;">Cite This Paper</h6>
+              <h6 class="section-title-primary">Cite This Paper</h6>
               <div class="citation-box">
                 <div class="mb-2">
                   <small class="text-muted">Select format:</small>
@@ -210,7 +210,7 @@
                     <option value="bibtex">BibTeX</option>
                   </select>
                 </div>
-                <div class="citation-text" id="citationText" style="background:#f8f9fc;padding:12px;border-radius:6px;font-size:13px;line-height:1.6;color:#444;margin-top:10px;">
+                <div class="citation-text citation-text-block" id="citationText">
                   Chen, S., Liu, W., &amp; Park, T. (2026). Transformer Architecture for Code Generation Tasks. <em>International Journal of Innovative Discoveries, 12</em>(3), 45-62. https://doi.org/10.1234/ijid.2026.0078
                 </div>
                 <button class="btn-journal-outline btn-sm-journal btn-block mt-2" id="copyCitation">
@@ -221,29 +221,29 @@
 
             <!-- Share -->
             <div class="paper-sidebar-card mb-4">
-              <h6 style="color:var(--ijid-primary);margin-bottom:15px;">Share</h6>
+              <h6 class="section-title-primary">Share</h6>
               <div class="d-flex">
-                <a href="#" class="mr-3" style="font-size:20px;color:var(--ijid-secondary);"><i class="ti-twitter-alt"></i></a>
-                <a href="#" class="mr-3" style="font-size:20px;color:var(--ijid-secondary);"><i class="ti-linkedin"></i></a>
-                <a href="#" class="mr-3" style="font-size:20px;color:var(--ijid-secondary);"><i class="ti-email"></i></a>
-                <a href="#" class="mr-3" style="font-size:20px;color:var(--ijid-secondary);"><i class="ti-link"></i></a>
+                <a href="#" class="mr-3 share-link"><i class="ti-twitter-alt"></i></a>
+                <a href="#" class="mr-3 share-link"><i class="ti-linkedin"></i></a>
+                <a href="#" class="mr-3 share-link"><i class="ti-email"></i></a>
+                <a href="#" class="mr-3 share-link"><i class="ti-link"></i></a>
               </div>
             </div>
 
             <!-- Related Papers -->
             <div class="paper-sidebar-card">
-              <h6 style="color:var(--ijid-primary);margin-bottom:15px;">Related Papers</h6>
+              <h6 class="section-title-primary">Related Papers</h6>
               <div class="mb-3">
-                <a href="#" style="color:var(--ijid-primary);font-size:14px;font-weight:500;">Deep Learning for Low-Resource NLP</a>
-                <p class="text-muted mb-0" style="font-size:12px;">L. Kim et al. | 2026</p>
+                <a href="#" class="related-paper-link">Deep Learning for Low-Resource NLP</a>
+                <p class="text-muted mb-0 related-paper-meta">L. Kim et al. | 2026</p>
               </div>
               <div class="mb-3">
-                <a href="#" style="color:var(--ijid-primary);font-size:14px;font-weight:500;">Neural Program Repair Using Graph Transformers</a>
-                <p class="text-muted mb-0" style="font-size:12px;">D. Patel et al. | 2025</p>
+                <a href="#" class="related-paper-link">Neural Program Repair Using Graph Transformers</a>
+                <p class="text-muted mb-0 related-paper-meta">D. Patel et al. | 2025</p>
               </div>
               <div>
-                <a href="#" style="color:var(--ijid-primary);font-size:14px;font-weight:500;">Multi-Modal Code Understanding with Vision-Language Models</a>
-                <p class="text-muted mb-0" style="font-size:12px;">J. Hernandez et al. | 2025</p>
+                <a href="#" class="related-paper-link">Multi-Modal Code Understanding with Vision-Language Models</a>
+                <p class="text-muted mb-0 related-paper-meta">J. Hernandez et al. | 2025</p>
               </div>
             </div>
           </div>
@@ -252,15 +252,15 @@
     </section>
 
     <!--================ Footer =================-->
-    <footer style="background:var(--ijid-primary);padding:40px 0 20px;color:rgba(255,255,255,0.8);">
+    <footer class="footer-simple">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <h5 style="color:#fff;">IJID — International Journal of Innovative Discoveries</h5>
-            <p style="font-size:14px;">ISSN: 2026-XXXX &nbsp;|&nbsp; Open Access &nbsp;|&nbsp; Peer Reviewed</p>
+            <h5>IJID — International Journal of Innovative Discoveries</h5>
+            <p class="footer-text-sm">ISSN: 2026-XXXX &nbsp;|&nbsp; Open Access &nbsp;|&nbsp; Peer Reviewed</p>
           </div>
           <div class="col-md-6 text-md-right">
-            <p style="font-size:14px;">&copy; 2026 IJID. All rights reserved.</p>
+            <p class="footer-text-sm">&copy; 2026 IJID. All rights reserved.</p>
           </div>
         </div>
       </div>
