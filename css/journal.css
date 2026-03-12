@@ -471,6 +471,28 @@ a:hover {
   color: rgba(255,255,255,0.88) !important;
 }
 
+.header_area.header_on_primary .nav-auth-btn .btn-login {
+  color: #fff;
+  border-color: rgba(255,255,255,0.9);
+}
+
+.header_area.header_on_primary .nav-auth-btn .btn-login:hover {
+  background: #fff;
+  color: var(--ijid-primary);
+}
+
+.header_area.header_on_primary .nav-auth-btn .btn-signup {
+  background: var(--ijid-secondary);
+  border-color: var(--ijid-secondary);
+  color: var(--ijid-primary);
+}
+
+.header_area.header_on_primary .nav-auth-btn .btn-signup:hover {
+  background: #fff;
+  border-color: #fff;
+  color: var(--ijid-primary);
+}
+
 .header_area.header_on_primary .navbar .nav .nav-item:hover .nav-link,
 .header_area.header_on_primary .navbar .nav .nav-item.active .nav-link {
   color: var(--ijid-secondary) !important;
@@ -496,6 +518,16 @@ a:hover {
 
 .header_area.header_on_primary .navbar .nav .nav-item.submenu ul .nav-item:hover .nav-link {
   color: #fff !important;
+}
+
+.header_area.header_on_primary.navbar_fixed .main_menu {
+  background: var(--ijid-primary);
+}
+
+.header_area.header_on_primary.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link,
+.header_area.header_on_primary.navbar_fixed .main_menu .navbar-brand,
+.header_area.header_on_primary.navbar_fixed .main_menu .navbar-brand .brand-mark {
+  color: rgba(255,255,255,0.9) !important;
 }
 
 /* Auth Buttons in Nav */
