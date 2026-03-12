@@ -28,7 +28,7 @@
                 <div class="notifications-dropdown" id="notifDropdown">
                   <div class="notif-header">
                     <h6>Notifications</h6>
-                    <a href="#" class="small-link">Mark all read</a>
+                    <a href="notifications.html" class="small-link">View all</a>
                   </div>
                   <div class="notif-list">
                     <div class="notif-item unread">
@@ -62,7 +62,7 @@
                   Dr. Sarah Chen
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" href="#">Profile Settings</a>
+                  <a class="dropdown-item" href="profile-settings.html">Profile Settings</a>
                   <a class="dropdown-item" href="login.html">Logout</a>
                 </div>
               </div>
@@ -84,10 +84,10 @@
         <ul class="nav-menu">
           <li><a href="dashboard-author.html" class="active"><i class="ti-dashboard"></i> Dashboard</a></li>
           <li><a href="submit-paper.html"><i class="ti-pencil-alt"></i> Submit Paper</a></li>
-          <li><a href="#"><i class="ti-files"></i> My Submissions</a></li>
-          <li><a href="#"><i class="ti-comments"></i> Messages</a></li>
-          <li><a href="#"><i class="ti-bell"></i> Notifications</a></li>
-          <li><a href="#"><i class="ti-settings"></i> Profile Settings</a></li>
+          <li><a href="dashboard-author.html#my-submissions"><i class="ti-files"></i> My Submissions</a></li>
+          <li><a href="messages.html"><i class="ti-comments"></i> Messages</a></li>
+          <li><a href="notifications.html"><i class="ti-bell"></i> Notifications</a></li>
+          <li><a href="profile-settings.html"><i class="ti-settings"></i> Profile Settings</a></li>
           <li><a href="login.html"><i class="ti-power-off"></i> Logout</a></li>
         </ul>
       </div>
@@ -137,7 +137,7 @@
         </div>
 
         <!-- Submissions Table -->
-        <div class="dash-card">
+        <div class="dash-card" id="my-submissions">
           <div class="dash-card-header">
             <h5>My Submissions</h5>
             <a href="submit-paper.html" class="btn-journal btn-sm-journal"><i class="ti-plus mr-1"></i> New Submission</a>
@@ -183,11 +183,11 @@
                 </tr>
                 <tr>
                   <td>#IJID-2026-0103</td>
-                  <td><a href="#" class="paper-title-link">Quantum Computing for Drug Discovery Optimization</a></td>
+                  <td><a href="paper-view.html" class="paper-title-link">Quantum Computing for Drug Discovery Optimization</a></td>
                   <td>Quantum Computing</td>
                   <td>Mar 8, 2026</td>
                   <td><span class="badge-status badge-submitted">Submitted</span></td>
-                  <td><a href="#" class="btn-journal-outline btn-sm-journal">Track</a></td>
+                  <td><a href="paper-view.html" class="btn-journal-outline btn-sm-journal">Track</a></td>
                 </tr>
                 <tr>
                   <td>#IJID-2025-0245</td>
@@ -199,11 +199,11 @@
                 </tr>
                 <tr>
                   <td>#IJID-2025-0310</td>
-                  <td><a href="#" class="paper-title-link">Graph Neural Networks for Social Network Analysis</a></td>
+                  <td><a href="paper-view.html" class="paper-title-link">Graph Neural Networks for Social Network Analysis</a></td>
                   <td>Data Science</td>
                   <td>Nov 5, 2025</td>
                   <td><span class="badge-status badge-approved">Approved</span></td>
-                  <td><a href="#" class="btn-journal-outline btn-sm-journal">View</a></td>
+                  <td><a href="paper-view.html" class="btn-journal-outline btn-sm-journal">View</a></td>
                 </tr>
               </tbody>
             </table>

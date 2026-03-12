@@ -31,7 +31,7 @@
                   Dr. Amara Singh
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" href="#">Profile Settings</a>
+                  <a class="dropdown-item" href="profile-settings.html">Profile Settings</a>
                   <a class="dropdown-item" href="login.html">Logout</a>
                 </div>
               </div>
@@ -51,11 +51,11 @@
         </div>
         <ul class="nav-menu">
           <li><a href="dashboard-reviewer.html" class="active"><i class="ti-dashboard"></i> Dashboard</a></li>
-          <li><a href="#"><i class="ti-clipboard"></i> Assigned Papers</a></li>
-          <li><a href="#"><i class="ti-check-box"></i> Completed Reviews</a></li>
-          <li><a href="#"><i class="ti-comments"></i> Messages</a></li>
-          <li><a href="#"><i class="ti-bell"></i> Notifications</a></li>
-          <li><a href="#"><i class="ti-settings"></i> Profile Settings</a></li>
+          <li><a href="dashboard-reviewer.html#assigned-papers"><i class="ti-clipboard"></i> Assigned Papers</a></li>
+          <li><a href="dashboard-reviewer.html#completed-reviews"><i class="ti-check-box"></i> Completed Reviews</a></li>
+          <li><a href="messages.html"><i class="ti-comments"></i> Messages</a></li>
+          <li><a href="notifications.html"><i class="ti-bell"></i> Notifications</a></li>
+          <li><a href="profile-settings.html"><i class="ti-settings"></i> Profile Settings</a></li>
           <li><a href="login.html"><i class="ti-power-off"></i> Logout</a></li>
         </ul>
       </div>
@@ -104,7 +104,7 @@
         </div>
 
         <!-- Assigned Papers -->
-        <div class="dash-card">
+        <div class="dash-card" id="assigned-papers">
           <div class="dash-card-header">
             <h5>Assigned Papers — Pending Review</h5>
           </div>
@@ -159,7 +159,7 @@
         </div>
 
         <!-- Completed Reviews -->
-        <div class="dash-card">
+        <div class="dash-card" id="completed-reviews">
           <div class="dash-card-header">
             <h5>Recent Completed Reviews</h5>
           </div>
@@ -180,21 +180,21 @@
                   <td>Deep Learning Approaches for NLP in Low-Resource Languages</td>
                   <td><span class="badge-status badge-approved">Approved</span></td>
                   <td>Jan 28, 2026</td>
-                  <td><a href="#" class="btn-journal-outline btn-sm-journal">View</a></td>
+                  <td><a href="review-paper.html" class="btn-journal-outline btn-sm-journal">View</a></td>
                 </tr>
                 <tr>
                   <td>#IJID-2026-0055</td>
                   <td>Sustainable Energy Grid Optimization Using Genetic Algorithms</td>
                   <td><span class="badge-status badge-revisions">Revisions</span></td>
                   <td>Feb 10, 2026</td>
-                  <td><a href="#" class="btn-journal-outline btn-sm-journal">View</a></td>
+                  <td><a href="review-paper.html" class="btn-journal-outline btn-sm-journal">View</a></td>
                 </tr>
                 <tr>
                   <td>#IJID-2026-0063</td>
                   <td>Sentiment Analysis of COVID-19 Vaccine Discourse on Social Media</td>
                   <td><span class="badge-status badge-rejected">Rejected</span></td>
                   <td>Feb 18, 2026</td>
-                  <td><a href="#" class="btn-journal-outline btn-sm-journal">View</a></td>
+                  <td><a href="review-paper.html" class="btn-journal-outline btn-sm-journal">View</a></td>
                 </tr>
               </tbody>
             </table>

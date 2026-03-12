@@ -65,7 +65,7 @@
                   Prof. H. Rahman
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" href="#">Profile Settings</a>
+                  <a class="dropdown-item" href="profile-settings.html">Profile Settings</a>
                   <a class="dropdown-item" href="login.html">Logout</a>
                 </div>
               </div>
@@ -85,12 +85,12 @@
         </div>
         <ul class="nav-menu">
           <li><a href="dashboard-admin.html" class="active"><i class="ti-dashboard"></i> Dashboard</a></li>
-          <li><a href="#"><i class="ti-files"></i> All Submissions</a></li>
-          <li><a href="#"><i class="ti-user"></i> Manage Users</a></li>
-          <li><a href="#"><i class="ti-pencil-alt"></i> Assign Reviewers</a></li>
-          <li><a href="#"><i class="ti-announcement"></i> Announcements</a></li>
-          <li><a href="#"><i class="ti-bar-chart"></i> Analytics</a></li>
-          <li><a href="#"><i class="ti-settings"></i> Settings</a></li>
+          <li><a href="dashboard-admin.html#submissions-overview"><i class="ti-files"></i> All Submissions</a></li>
+          <li><a href="dashboard-admin.html#registered-users"><i class="ti-user"></i> Manage Users</a></li>
+          <li><a href="dashboard-admin.html#assignment-queue"><i class="ti-pencil-alt"></i> Assign Reviewers</a></li>
+          <li><a href="announcements.html"><i class="ti-announcement"></i> Announcements</a></li>
+          <li><a href="analytics.html"><i class="ti-bar-chart"></i> Analytics</a></li>
+          <li><a href="settings.html"><i class="ti-settings"></i> Settings</a></li>
           <li><a href="login.html"><i class="ti-power-off"></i> Logout</a></li>
         </ul>
       </div>
@@ -179,10 +179,10 @@
         </div>
 
         <!-- Recent Submissions Needing Assignment -->
-        <div class="dash-card">
+        <div class="dash-card" id="assignment-queue">
           <div class="dash-card-header">
             <h5>Submissions Awaiting Reviewer Assignment</h5>
-            <a href="#" class="btn-journal-outline btn-sm-journal">View All</a>
+            <a href="dashboard-admin.html#submissions-overview" class="btn-journal-outline btn-sm-journal">View All</a>
           </div>
           <div class="dash-card-body table-scroll">
             <table class="submission-table">
@@ -243,7 +243,7 @@
         </div>
 
         <!-- All Submissions Overview -->
-        <div class="dash-card">
+        <div class="dash-card" id="submissions-overview">
           <div class="dash-card-header">
             <h5>All Submissions Overview</h5>
             <div>
@@ -334,10 +334,10 @@
         </div>
 
         <!-- User Management -->
-        <div class="dash-card">
+        <div class="dash-card" id="registered-users">
           <div class="dash-card-header">
             <h5>Recently Registered Users</h5>
-            <a href="#" class="btn-journal-outline btn-sm-journal">Manage All Users</a>
+            <a href="dashboard-admin.html#registered-users" class="btn-journal-outline btn-sm-journal">Manage All Users</a>
           </div>
           <div class="dash-card-body table-scroll">
             <table class="submission-table">
@@ -357,7 +357,7 @@
                   <td><span class="badge-status badge-submitted">Author</span></td>
                   <td>Mar 14, 2026</td>
                   <td>
-                    <a href="#" class="btn-journal-outline btn-sm-journal">View</a>
+                    <a href="profile-settings.html" class="btn-journal-outline btn-sm-journal">View</a>
                     <a href="#" class="btn-sm-journal action-link-danger">Disable</a>
                   </td>
                 </tr>
@@ -367,7 +367,7 @@
                   <td><span class="badge-status badge-under-review">Reviewer</span></td>
                   <td>Mar 13, 2026</td>
                   <td>
-                    <a href="#" class="btn-journal-outline btn-sm-journal">View</a>
+                    <a href="profile-settings.html" class="btn-journal-outline btn-sm-journal">View</a>
                     <a href="#" class="btn-sm-journal action-link-danger">Disable</a>
                   </td>
                 </tr>
@@ -377,7 +377,7 @@
                   <td><span class="badge-status badge-submitted">Author</span></td>
                   <td>Mar 12, 2026</td>
                   <td>
-                    <a href="#" class="btn-journal-outline btn-sm-journal">View</a>
+                    <a href="profile-settings.html" class="btn-journal-outline btn-sm-journal">View</a>
                     <a href="#" class="btn-sm-journal action-link-danger">Disable</a>
                   </td>
                 </tr>
