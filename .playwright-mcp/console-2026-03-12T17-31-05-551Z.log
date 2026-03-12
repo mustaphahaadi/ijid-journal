@@ -1,0 +1,4 @@
+[ 3989788ms] TypeError: $(...).find(...).ajaxChimp is not a function
+    at mailChimp (http://127.0.0.1:8000/js/theme.js:123:8)
+    at http://127.0.0.1:8000/js/theme.js:125:3
+    at http://127.0.0.1:8000/js/theme.js:339:3

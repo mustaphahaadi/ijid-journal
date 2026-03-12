@@ -118,7 +118,13 @@
   /*  MailChimp Slider
     /*----------------------------------------------------*/
   function mailChimp() {
-    $("#mc_embed_signup")
+    var signup = $("#mc_embed_signup");
+
+    if (!signup.length || typeof $.fn.ajaxChimp !== "function") {
+      return;
+    }
+
+    signup
       .find("form")
       .ajaxChimp();
   }
