@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <title>Review Paper - IJID</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/journal.css" />
+  </head>
+  <body>
+    <!--================ Header =================-->
+    <header class="header_area navbar_fixed">
+      <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid px-4">
+            <a class="navbar-brand logo_h" href="index.html">
+              <strong style="font-size:24px;color:var(--ijid-primary);">IJID</strong>
+            </a>
+            <div class="d-flex align-items-center ml-auto">
+              <div class="nav-notification" id="notifBell" style="cursor:pointer;">
+                <i class="ti-bell" style="font-size:18px;color:var(--ijid-primary);"></i>
+                <span class="badge-count">5</span>
+              </div>
+              <div class="dropdown ml-3">
+                <a class="dropdown-toggle d-flex align-items-center" href="#" role="button" data-toggle="dropdown" style="color:var(--ijid-primary);font-size:14px;">
+                  <img src="img/trainer/t2.jpg" alt="" style="width:35px;height:35px;border-radius:50%;margin-right:8px;object-fit:cover;" />
+                  Dr. Amara Singh
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#">Profile Settings</a>
+                  <a class="dropdown-item" href="login.html">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!--================ Dashboard =================-->
+    <div class="dashboard-area">
+      <div class="dashboard-sidebar">
+        <div class="sidebar-user">
+          <img src="img/trainer/t2.jpg" alt="" class="user-avatar" />
+          <h5>Dr. Amara Singh</h5>
+          <span>Reviewer</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="dashboard-reviewer.html"><i class="ti-dashboard"></i> Dashboard</a></li>
+          <li><a href="#" class="active"><i class="ti-clipboard"></i> Assigned Papers</a></li>
+          <li><a href="#"><i class="ti-check-box"></i> Completed Reviews</a></li>
+          <li><a href="#"><i class="ti-comments"></i> Messages</a></li>
+          <li><a href="#"><i class="ti-bell"></i> Notifications</a></li>
+          <li><a href="#"><i class="ti-settings"></i> Profile Settings</a></li>
+          <li><a href="login.html"><i class="ti-power-off"></i> Logout</a></li>
+        </ul>
+      </div>
+
+      <div class="dashboard-content">
+        <!-- Paper Info Header -->
+        <div class="review-section">
+          <div class="review-paper-info">
+            <div class="d-flex justify-content-between align-items-start flex-wrap mb-3">
+              <div>
+                <span class="badge-status badge-under-review mb-2 d-inline-block">Under Review</span>
+                <h4 class="mb-1">Transformer Architecture for Code Generation Tasks</h4>
+                <p class="text-muted mb-0">Paper ID: #IJID-2026-0078</p>
+              </div>
+              <div class="text-right">
+                <p class="text-muted mb-1" style="font-size:13px;">Assigned: Feb 25, 2026</p>
+                <p style="font-size:13px;color:var(--ijid-accent);font-weight:500;">Deadline: Mar 15, 2026</p>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col-md-6">
+                <p><strong>Authors:</strong> S. Chen, W. Liu, T. Park</p>
+                <p><strong>Institution:</strong> Stanford University</p>
+              </div>
+              <div class="col-md-6">
+                <p><strong>Category:</strong> Artificial Intelligence</p>
+                <p><strong>Type:</strong> Original Research</p>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <p><strong>Abstract:</strong></p>
+              <p style="font-size:14px;color:#555;line-height:1.7;">
+                This paper presents a novel transformer-based architecture optimized for automated code generation tasks across multiple programming languages. We introduce CodeFormer, a model that leverages hierarchical attention mechanisms and syntax-aware positional encodings to generate syntactically correct and semantically meaningful code from natural language descriptions. Our experiments on the HumanEval benchmark demonstrate a 15.3% improvement over existing state-of-the-art methods, with particularly strong performance on complex multi-step programming tasks. We also introduce a new evaluation metric, Semantic Correctness Score (SCS), which better captures the functional equivalence of generated code.
+              </p>
+              <p><strong>Keywords:</strong>
+                <span class="badge badge-light mr-1 mb-1" style="font-size:12px;padding:4px 10px;">Transformer</span>
+                <span class="badge badge-light mr-1 mb-1" style="font-size:12px;padding:4px 10px;">Code Generation</span>
+                <span class="badge badge-light mr-1 mb-1" style="font-size:12px;padding:4px 10px;">NLP</span>
+                <span class="badge badge-light mr-1 mb-1" style="font-size:12px;padding:4px 10px;">Deep Learning</span>
+              </p>
+            </div>
+
+            <div class="mt-3">
+              <a href="#" class="btn-journal-outline btn-sm-journal mr-2"><i class="ti-download"></i> Download Manuscript (PDF)</a>
+              <a href="#" class="btn-journal-outline btn-sm-journal"><i class="ti-files"></i> Supplementary Files</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Status Timeline -->
+        <div class="dash-card">
+          <div class="dash-card-header"><h5>Review Timeline</h5></div>
+          <div class="dash-card-body">
+            <div class="review-timeline">
+              <div class="timeline-item completed">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <strong>Submitted</strong>
+                  <span>Feb 20, 2026</span>
+                </div>
+              </div>
+              <div class="timeline-item completed">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <strong>Assigned to Reviewer</strong>
+                  <span>Feb 25, 2026</span>
+                </div>
+              </div>
+              <div class="timeline-item active">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <strong>Under Review</strong>
+                  <span>In Progress</span>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <strong>Decision</strong>
+                  <span>Pending</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Structured Review Form -->
+        <div class="dash-card">
+          <div class="dash-card-header"><h5>Submit Your Review</h5></div>
+          <div class="dash-card-body">
+            <form id="reviewForm">
+              <!-- Rating Criteria -->
+              <h6 class="mb-3" style="color:var(--ijid-primary);">Evaluation Criteria</h6>
+
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label><strong>Originality & Novelty</strong></label>
+                  <select class="form-control">
+                    <option>-- Rate (1-5) --</option>
+                    <option value="5">5 — Excellent</option>
+                    <option value="4">4 — Good</option>
+                    <option value="3">3 — Average</option>
+                    <option value="2">2 — Below Average</option>
+                    <option value="1">1 — Poor</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label><strong>Technical Soundness</strong></label>
+                  <select class="form-control">
+                    <option>-- Rate (1-5) --</option>
+                    <option value="5">5 — Excellent</option>
+                    <option value="4">4 — Good</option>
+                    <option value="3">3 — Average</option>
+                    <option value="2">2 — Below Average</option>
+                    <option value="1">1 — Poor</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label><strong>Methodology</strong></label>
+                  <select class="form-control">
+                    <option>-- Rate (1-5) --</option>
+                    <option value="5">5 — Excellent</option>
+                    <option value="4">4 — Good</option>
+                    <option value="3">3 — Average</option>
+                    <option value="2">2 — Below Average</option>
+                    <option value="1">1 — Poor</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label><strong>Clarity & Presentation</strong></label>
+                  <select class="form-control">
+                    <option>-- Rate (1-5) --</option>
+                    <option value="5">5 — Excellent</option>
+                    <option value="4">4 — Good</option>
+                    <option value="3">3 — Average</option>
+                    <option value="2">2 — Below Average</option>
+                    <option value="1">1 — Poor</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="col-md-6">
+                  <label><strong>References & Literature Review</strong></label>
+                  <select class="form-control">
+                    <option>-- Rate (1-5) --</option>
+                    <option value="5">5 — Excellent</option>
+                    <option value="4">4 — Good</option>
+                    <option value="3">3 — Average</option>
+                    <option value="2">2 — Below Average</option>
+                    <option value="1">1 — Poor</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label><strong>Significance & Impact</strong></label>
+                  <select class="form-control">
+                    <option>-- Rate (1-5) --</option>
+                    <option value="5">5 — Excellent</option>
+                    <option value="4">4 — Good</option>
+                    <option value="3">3 — Average</option>
+                    <option value="2">2 — Below Average</option>
+                    <option value="1">1 — Poor</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Detailed Comments -->
+              <h6 class="mb-3" style="color:var(--ijid-primary);">Detailed Comments</h6>
+
+              <div class="form-group">
+                <label><strong>Summary of the Paper</strong></label>
+                <textarea class="form-control" rows="3" placeholder="Briefly summarize the paper's main contribution and findings..."></textarea>
+              </div>
+              <div class="form-group">
+                <label><strong>Strengths</strong></label>
+                <textarea class="form-control" rows="4" placeholder="List the key strengths of this manuscript..."></textarea>
+              </div>
+              <div class="form-group">
+                <label><strong>Weaknesses / Areas for Improvement</strong></label>
+                <textarea class="form-control" rows="4" placeholder="List specific weaknesses or areas that need improvement..."></textarea>
+              </div>
+              <div class="form-group">
+                <label><strong>Specific Comments & Suggestions</strong></label>
+                <textarea class="form-control" rows="5" placeholder="Provide detailed, line-by-line or section-by-section comments..."></textarea>
+              </div>
+              <div class="form-group">
+                <label><strong>Confidential Comments for the Editor</strong></label>
+                <textarea class="form-control" rows="3" placeholder="These comments will only be visible to the editor, not the author..."></textarea>
+              </div>
+
+              <!-- Decision -->
+              <h6 class="mb-3" style="color:var(--ijid-primary);">Recommendation</h6>
+              <div class="review-decision">
+                <div class="decision-options">
+                  <label class="decision-option">
+                    <input type="radio" name="decision" value="approve" />
+                    <div class="decision-card approve">
+                      <i class="ti-check"></i>
+                      <strong>Accept</strong>
+                      <span>Ready for publication with no or minor edits</span>
+                    </div>
+                  </label>
+                  <label class="decision-option">
+                    <input type="radio" name="decision" value="minor-revisions" />
+                    <div class="decision-card revise">
+                      <i class="ti-pencil-alt"></i>
+                      <strong>Minor Revisions</strong>
+                      <span>Requires small corrections before acceptance</span>
+                    </div>
+                  </label>
+                  <label class="decision-option">
+                    <input type="radio" name="decision" value="major-revisions" />
+                    <div class="decision-card revise">
+                      <i class="ti-reload"></i>
+                      <strong>Major Revisions</strong>
+                      <span>Significant changes needed; re-review required</span>
+                    </div>
+                  </label>
+                  <label class="decision-option">
+                    <input type="radio" name="decision" value="reject" />
+                    <div class="decision-card reject">
+                      <i class="ti-close"></i>
+                      <strong>Reject</strong>
+                      <span>Does not meet publication standards</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Submit -->
+              <div class="d-flex justify-content-between align-items-center mt-4 mb-3">
+                <button type="button" class="btn-journal-outline">
+                  <i class="ti-save"></i> Save Draft
+                </button>
+                <button type="submit" class="btn-journal">
+                  <i class="ti-check"></i> Submit Review
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Previous Comments Thread (if revision round) -->
+        <div class="dash-card">
+          <div class="dash-card-header"><h5>Comment Thread</h5></div>
+          <div class="dash-card-body">
+            <div class="comment-thread">
+              <p class="text-muted text-center" style="font-size:14px;">No previous review comments for this paper. This is the first review round.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/journal.js"></script>
+  </body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <title>Reviewer Dashboard - IJID</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/journal.css" />
+  </head>
+  <body>
+    <!--================ Header =================-->
+    <header class="header_area navbar_fixed">
+      <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid px-4">
+            <a class="navbar-brand logo_h" href="index.html">
+              <strong style="font-size:24px;color:var(--ijid-primary);">IJID</strong>
+            </a>
+            <div class="d-flex align-items-center ml-auto">
+              <div class="nav-notification" id="notifBell" style="cursor:pointer;">
+                <i class="ti-bell" style="font-size:18px;color:var(--ijid-primary);"></i>
+                <span class="badge-count">5</span>
+              </div>
+              <div class="dropdown ml-3">
+                <a class="dropdown-toggle d-flex align-items-center" href="#" role="button" data-toggle="dropdown" style="color:var(--ijid-primary);font-size:14px;">
+                  <img src="img/trainer/t2.jpg" alt="" style="width:35px;height:35px;border-radius:50%;margin-right:8px;object-fit:cover;" />
+                  Dr. Amara Singh
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#">Profile Settings</a>
+                  <a class="dropdown-item" href="login.html">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!--================ Dashboard =================-->
+    <div class="dashboard-area">
+      <div class="dashboard-sidebar">
+        <div class="sidebar-user">
+          <img src="img/trainer/t2.jpg" alt="" class="user-avatar" />
+          <h5>Dr. Amara Singh</h5>
+          <span>Reviewer / Editor</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="dashboard-reviewer.html" class="active"><i class="ti-dashboard"></i> Dashboard</a></li>
+          <li><a href="#"><i class="ti-clipboard"></i> Assigned Papers</a></li>
+          <li><a href="#"><i class="ti-check-box"></i> Completed Reviews</a></li>
+          <li><a href="#"><i class="ti-comments"></i> Messages</a></li>
+          <li><a href="#"><i class="ti-bell"></i> Notifications</a></li>
+          <li><a href="#"><i class="ti-settings"></i> Profile Settings</a></li>
+          <li><a href="login.html"><i class="ti-power-off"></i> Logout</a></li>
+        </ul>
+      </div>
+
+      <div class="dashboard-content">
+        <h4 class="mb-4">Reviewer Dashboard</h4>
+
+        <!-- Stats -->
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-icon bg-warning-light"><i class="ti-clipboard"></i></div>
+              <div class="stat-info">
+                <h3>4</h3>
+                <p>Pending Reviews</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-icon bg-success-light"><i class="ti-check-box"></i></div>
+              <div class="stat-info">
+                <h3>23</h3>
+                <p>Completed Reviews</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-icon bg-primary-light"><i class="ti-timer"></i></div>
+              <div class="stat-info">
+                <h3>12</h3>
+                <p>Avg. Days to Review</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-icon bg-danger-light"><i class="ti-alarm-clock"></i></div>
+              <div class="stat-info">
+                <h3>2</h3>
+                <p>Overdue</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Assigned Papers -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h5>Assigned Papers — Pending Review</h5>
+          </div>
+          <div class="dash-card-body" style="overflow-x:auto;">
+            <table class="submission-table">
+              <thead>
+                <tr>
+                  <th>Paper ID</th>
+                  <th>Title</th>
+                  <th>Author(s)</th>
+                  <th>Assigned Date</th>
+                  <th>Deadline</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#IJID-2026-0078</td>
+                  <td><a href="review-paper.html" class="paper-title-link">Transformer Architecture for Code Generation Tasks</a></td>
+                  <td>S. Chen et al.</td>
+                  <td>Feb 25, 2026</td>
+                  <td><span style="color:var(--ijid-accent);font-weight:500;">Mar 15, 2026</span></td>
+                  <td><a href="review-paper.html" class="btn-journal btn-sm-journal">Review</a></td>
+                </tr>
+                <tr>
+                  <td>#IJID-2026-0085</td>
+                  <td><a href="review-paper.html" class="paper-title-link">Blockchain-Based Supply Chain Traceability for Pharmaceuticals</a></td>
+                  <td>J. Martinez, K. Okonkwo</td>
+                  <td>Mar 2, 2026</td>
+                  <td>Mar 25, 2026</td>
+                  <td><a href="review-paper.html" class="btn-journal btn-sm-journal">Review</a></td>
+                </tr>
+                <tr>
+                  <td>#IJID-2026-0099</td>
+                  <td><a href="review-paper.html" class="paper-title-link">Edge Computing Architectures for Real-Time IoT Analytics</a></td>
+                  <td>W. Thompson</td>
+                  <td>Mar 5, 2026</td>
+                  <td>Apr 1, 2026</td>
+                  <td><a href="review-paper.html" class="btn-journal btn-sm-journal">Review</a></td>
+                </tr>
+                <tr>
+                  <td>#IJID-2026-0112</td>
+                  <td><a href="review-paper.html" class="paper-title-link">Explainable AI for Clinical Decision Support Systems</a></td>
+                  <td>L. Nguyen, R. Patel</td>
+                  <td>Mar 10, 2026</td>
+                  <td>Apr 5, 2026</td>
+                  <td><a href="review-paper.html" class="btn-journal btn-sm-journal">Review</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Completed Reviews -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h5>Recent Completed Reviews</h5>
+          </div>
+          <div class="dash-card-body" style="overflow-x:auto;">
+            <table class="submission-table">
+              <thead>
+                <tr>
+                  <th>Paper ID</th>
+                  <th>Title</th>
+                  <th>Decision</th>
+                  <th>Reviewed On</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#IJID-2026-0042</td>
+                  <td>Deep Learning Approaches for NLP in Low-Resource Languages</td>
+                  <td><span class="badge-status badge-approved">Approved</span></td>
+                  <td>Jan 28, 2026</td>
+                  <td><a href="#" class="btn-journal-outline btn-sm-journal">View</a></td>
+                </tr>
+                <tr>
+                  <td>#IJID-2026-0055</td>
+                  <td>Sustainable Energy Grid Optimization Using Genetic Algorithms</td>
+                  <td><span class="badge-status badge-revisions">Revisions</span></td>
+                  <td>Feb 10, 2026</td>
+                  <td><a href="#" class="btn-journal-outline btn-sm-journal">View</a></td>
+                </tr>
+                <tr>
+                  <td>#IJID-2026-0063</td>
+                  <td>Sentiment Analysis of COVID-19 Vaccine Discourse on Social Media</td>
+                  <td><span class="badge-status badge-rejected">Rejected</span></td>
+                  <td>Feb 18, 2026</td>
+                  <td><a href="#" class="btn-journal-outline btn-sm-journal">View</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/journal.js"></script>
+  </body>
+</html>

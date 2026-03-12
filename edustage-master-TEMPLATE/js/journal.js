@@ -1,0 +1,279 @@
+/**
+ * IJID - International Journal of Innovative Discoveries
+ * Main JavaScript file for interactive functionality
+ */
+(function ($) {
+  "use strict";
+
+  // ========================================
+  // Role Selector (Register Page)
+  // ========================================
+  $(".role-option").on("click", function () {
+    $(".role-option").removeClass("active");
+    $(this).addClass("active");
+    var role = $(this).data("role");
+    $("#selectedRole").val(role);
+  });
+
+  // ========================================
+  // Notification Bell Toggle
+  // ========================================
+  $("#notifBell").on("click", function (e) {
+    e.stopPropagation();
+    $(".notification-dropdown").toggleClass("show");
+  });
+  $(document).on("click", function () {
+    $(".notification-dropdown").removeClass("show");
+  });
+  $(".notification-dropdown").on("click", function (e) {
+    e.stopPropagation();
+  });
+
+  // ========================================
+  // Markdown Editor Tab Switching
+  // ========================================
+  $(".editor-btn").on("click", function () {
+    $(".editor-btn").removeClass("active");
+    $(this).addClass("active");
+    var tab = $(this).data("tab");
+    if (tab === "write") {
+      $("#abstractWrite").show();
+      $("#abstractPreview").hide();
+    } else if (tab === "preview") {
+      $("#abstractWrite").hide();
+      $("#abstractPreview").show();
+      // Basic markdown-to-HTML preview
+      var md = $("#abstractText").val();
+      var html = simpleMarkdown(md);
+      $("#abstractPreviewContent").html(
+        html || '<p class="text-muted">Nothing to preview</p>'
+      );
+    }
+  });
+
+  function simpleMarkdown(text) {
+    if (!text) return "";
+    var html = text
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+    // Headers
+    html = html.replace(/^### (.+)$/gm, "<h5>$1</h5>");
+    html = html.replace(/^## (.+)$/gm, "<h4>$1</h4>");
+    html = html.replace(/^# (.+)$/gm, "<h3>$1</h3>");
+    // Bold & italic
+    html = html.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    html = html.replace(/\*(.+?)\*/g, "<em>$1</em>");
+    // Line breaks
+    html = html.replace(/\n\n/g, "</p><p>");
+    html = html.replace(/\n/g, "<br>");
+    return "<p>" + html + "</p>";
+  }
+
+  // ========================================
+  // Tags Input (Submit Paper)
+  // ========================================
+  var maxTags = 6;
+  $("#tagsInput").on("keydown", function (e) {
+    if (e.key === "Enter" || e.key === ",") {
+      e.preventDefault();
+      var val = $(this).val().trim();
+      if (!val) return;
+      var container = $("#tagsContainer");
+      var currentTags = container.find(".tag-item").length;
+      if (currentTags >= maxTags) return;
+      // Prevent duplicates
+      var exists = false;
+      container.find(".tag-item span").each(function () {
+        if ($(this).text().toLowerCase() === val.toLowerCase()) exists = true;
+      });
+      if (exists) return;
+      var tag = $(
+        '<div class="tag-item"><span>' +
+          $("<span>").text(val).html() +
+          "</span><button type='button' class='tag-remove'>&times;</button></div>"
+      );
+      container.find(".tags-input").before(tag);
+      $(this).val("");
+    }
+  });
+  $(document).on("click", ".tag-remove", function () {
+    $(this).parent(".tag-item").remove();
+  });
+
+  // ========================================
+  // File Upload – Manuscript
+  // ========================================
+  $("#manuscriptUpload").on("click", function () {
+    $("#manuscriptFile").click();
+  });
+  $("#manuscriptFile").on("change", function () {
+    var file = this.files[0];
+    if (file) {
+      $("#manuscriptFileName").text(file.name);
+      $("#manuscriptFileSize").text(formatBytes(file.size));
+      $("#manuscriptFileInfo").show();
+      $("#manuscriptUpload").hide();
+    }
+  });
+  $("#removeManuscript").on("click", function () {
+    $("#manuscriptFile").val("");
+    $("#manuscriptFileInfo").hide();
+    $("#manuscriptUpload").show();
+  });
+
+  // Drag & drop for manuscript
+  $("#manuscriptUpload")
+    .on("dragover", function (e) {
+      e.preventDefault();
+      $(this).addClass("dragover");
+    })
+    .on("dragleave", function () {
+      $(this).removeClass("dragover");
+    })
+    .on("drop", function (e) {
+      e.preventDefault();
+      $(this).removeClass("dragover");
+      var files = e.originalEvent.dataTransfer.files;
+      if (files.length) {
+        $("#manuscriptFile")[0].files = files;
+        $("#manuscriptFile").trigger("change");
+      }
+    });
+
+  // ========================================
+  // File Upload – Supplementary Files
+  // ========================================
+  $("#supplementaryUpload").on("click", function () {
+    $("#supplementaryFiles").click();
+  });
+  $("#supplementaryFiles").on("change", function () {
+    var files = this.files;
+    var list = $("#supplementaryFilesList");
+    for (var i = 0; i < files.length; i++) {
+      var f = files[i];
+      var item = $(
+        '<div class="d-flex align-items-center p-2 mb-1" style="background:#f8f9fa;border-radius:6px;">' +
+          '<i class="ti-file mr-2" style="color:var(--ijid-primary);"></i>' +
+          '<span class="mr-3">' +
+          $("<span>").text(f.name).html() +
+          "</span>" +
+          '<span class="text-muted mr-auto">' +
+          formatBytes(f.size) +
+          "</span>" +
+          '<button type="button" class="btn btn-sm btn-link text-danger supp-remove"><i class="ti-close"></i></button>' +
+          "</div>"
+      );
+      list.append(item);
+    }
+  });
+  $(document).on("click", ".supp-remove", function () {
+    $(this).closest(".d-flex").remove();
+  });
+
+  // ========================================
+  // Add Co-Author
+  // ========================================
+  $("#addAuthorBtn").on("click", function () {
+    var row = $(
+      '<div class="row mb-3 author-row">' +
+        '<div class="col-md-4"><input type="text" class="form-control" placeholder="Full Name *" required /></div>' +
+        '<div class="col-md-4"><input type="email" class="form-control" placeholder="Email *" required /></div>' +
+        '<div class="col-md-3"><input type="text" class="form-control" placeholder="Institution" /></div>' +
+        '<div class="col-md-1 d-flex align-items-center"><button type="button" class="btn btn-sm btn-link text-danger remove-author"><i class="ti-close"></i></button></div>' +
+        "</div>"
+    );
+    $("#authorsContainer").append(row);
+  });
+  $(document).on("click", ".remove-author", function () {
+    $(this).closest(".author-row").remove();
+  });
+
+  // ========================================
+  // Copy Citation
+  // ========================================
+  $("#copyCitation").on("click", function () {
+    var text = $("#citationText").text();
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () {
+        $("#copyCitation").html('<i class="ti-check"></i> Copied!');
+        setTimeout(function () {
+          $("#copyCitation").html(
+            '<i class="ti-clipboard"></i> Copy Citation'
+          );
+        }, 2000);
+      });
+    }
+  });
+
+  // Citation format switching
+  var citations = {
+    apa: 'Chen, S., Liu, W., & Park, T. (2026). Transformer Architecture for Code Generation Tasks. <em>International Journal of Innovative Discoveries, 12</em>(3), 45-62. https://doi.org/10.1234/ijid.2026.0078',
+    mla: 'Chen, Shuang, Wei Liu, and Taeho Park. "Transformer Architecture for Code Generation Tasks." <em>International Journal of Innovative Discoveries</em> 12.3 (2026): 45-62.',
+    chicago:
+      'Chen, Shuang, Wei Liu, and Taeho Park. "Transformer Architecture for Code Generation Tasks." <em>International Journal of Innovative Discoveries</em> 12, no. 3 (2026): 45-62.',
+    bibtex:
+      "@article{chen2026transformer,\n  title={Transformer Architecture for Code Generation Tasks},\n  author={Chen, Shuang and Liu, Wei and Park, Taeho},\n  journal={International Journal of Innovative Discoveries},\n  volume={12},\n  number={3},\n  pages={45--62},\n  year={2026}\n}",
+  };
+  $("#citationFormat").on("change", function () {
+    var fmt = $(this).val();
+    var text = citations[fmt] || citations.apa;
+    if (fmt === "bibtex") {
+      $("#citationText").html(
+        "<pre style='margin:0;white-space:pre-wrap;font-size:12px;'>" +
+          text +
+          "</pre>"
+      );
+    } else {
+      $("#citationText").html(text);
+    }
+  });
+
+  // ========================================
+  // Review Decision Selection
+  // ========================================
+  $(".decision-option input[type='radio']").on("change", function () {
+    $(".decision-card").removeClass("selected");
+    $(this).siblings(".decision-card").addClass("selected");
+  });
+
+  // ========================================
+  // Form Submissions (demo alerts)
+  // ========================================
+  $("#submitPaperForm").on("submit", function (e) {
+    e.preventDefault();
+    if (!$("#originalWork").is(":checked")) {
+      alert("Please confirm the originality declaration.");
+      return;
+    }
+    alert(
+      "Paper submitted successfully! You will receive a confirmation email shortly."
+    );
+  });
+  $("#saveDraftBtn").on("click", function () {
+    alert("Draft saved successfully!");
+  });
+  $("#reviewForm").on("submit", function (e) {
+    e.preventDefault();
+    if (!$('input[name="decision"]:checked').length) {
+      alert("Please select a recommendation before submitting.");
+      return;
+    }
+    alert("Review submitted successfully! Thank you for your evaluation.");
+  });
+  $("#contactForm").on("submit", function (e) {
+    e.preventDefault();
+    alert("Message sent! We will get back to you within 1-2 business days.");
+  });
+
+  // ========================================
+  // Utility: Format file size
+  // ========================================
+  function formatBytes(bytes) {
+    if (bytes === 0) return "0 Bytes";
+    var k = 1024;
+    var sizes = ["Bytes", "KB", "MB", "GB"];
+    var i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + " " + sizes[i];
+  }
+})(jQuery);

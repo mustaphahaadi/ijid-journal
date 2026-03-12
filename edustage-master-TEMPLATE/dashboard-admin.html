@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <title>Admin Dashboard - IJID</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/journal.css" />
+  </head>
+  <body>
+    <!--================ Header =================-->
+    <header class="header_area navbar_fixed">
+      <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid px-4">
+            <a class="navbar-brand logo_h" href="index.html">
+              <strong style="font-size:24px;color:var(--ijid-primary);">IJID</strong>
+            </a>
+            <div class="d-flex align-items-center ml-auto">
+              <div class="nav-notification" id="notifBell" style="cursor:pointer;">
+                <i class="ti-bell" style="font-size:18px;color:var(--ijid-primary);"></i>
+                <span class="badge-count">12</span>
+              </div>
+              <div class="dropdown ml-3">
+                <a class="dropdown-toggle d-flex align-items-center" href="#" role="button" data-toggle="dropdown" style="color:var(--ijid-primary);font-size:14px;">
+                  <img src="img/trainer/t3.jpg" alt="" style="width:35px;height:35px;border-radius:50%;margin-right:8px;object-fit:cover;" />
+                  Prof. H. Rahman
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#">Profile Settings</a>
+                  <a class="dropdown-item" href="login.html">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!--================ Dashboard =================-->
+    <div class="dashboard-area">
+      <div class="dashboard-sidebar">
+        <div class="sidebar-user">
+          <img src="img/trainer/t3.jpg" alt="" class="user-avatar" />
+          <h5>Prof. H. Rahman</h5>
+          <span>Administrator / Editor-in-Chief</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="dashboard-admin.html" class="active"><i class="ti-dashboard"></i> Dashboard</a></li>
+          <li><a href="#"><i class="ti-files"></i> All Submissions</a></li>
+          <li><a href="#"><i class="ti-user"></i> Manage Users</a></li>
+          <li><a href="#"><i class="ti-pencil-alt"></i> Assign Reviewers</a></li>
+          <li><a href="#"><i class="ti-announcement"></i> Announcements</a></li>
+          <li><a href="#"><i class="ti-bar-chart"></i> Analytics</a></li>
+          <li><a href="#"><i class="ti-settings"></i> Settings</a></li>
+          <li><a href="login.html"><i class="ti-power-off"></i> Logout</a></li>
+        </ul>
+      </div>
+
+      <div class="dashboard-content">
+        <h4 class="mb-4">Admin Dashboard</h4>
+
+        <!-- Stats Row 1 -->
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-icon bg-primary-light"><i class="ti-files"></i></div>
+              <div class="stat-info">
+                <h3>156</h3>
+                <p>Total Submissions</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-icon bg-warning-light"><i class="ti-time"></i></div>
+              <div class="stat-info">
+                <h3>18</h3>
+                <p>Awaiting Assignment</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-icon bg-info-light"><i class="ti-reload"></i></div>
+              <div class="stat-info">
+                <h3>34</h3>
+                <p>Under Review</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-icon bg-success-light"><i class="ti-check-box"></i></div>
+              <div class="stat-info">
+                <h3>89</h3>
+                <p>Published</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Row 2 -->
+        <div class="row mt-3">
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-icon bg-danger-light"><i class="ti-close"></i></div>
+              <div class="stat-info">
+                <h3>15</h3>
+                <p>Rejected</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-icon" style="background:#e8f0fe;color:var(--ijid-secondary);"><i class="ti-user"></i></div>
+              <div class="stat-info">
+                <h3>312</h3>
+                <p>Registered Users</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-icon" style="background:#fef3e0;color:#e67e22;"><i class="ti-pencil-alt"></i></div>
+              <div class="stat-info">
+                <h3>45</h3>
+                <p>Active Reviewers</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-icon" style="background:#e8f5e9;color:#27ae60;"><i class="ti-flag-alt"></i></div>
+              <div class="stat-info">
+                <h3>3.2</h3>
+                <p>Impact Factor</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Submissions Needing Assignment -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h5>Submissions Awaiting Reviewer Assignment</h5>
+            <a href="#" class="btn-journal-outline btn-sm-journal">View All</a>
+          </div>
+          <div class="dash-card-body" style="overflow-x:auto;">
+            <table class="submission-table">
+              <thead>
+                <tr>
+                  <th>Paper ID</th>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Submitted</th>
+                  <th>Category</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#IJID-2026-0120</td>
+                  <td>Federated Learning with Differential Privacy for Healthcare</td>
+                  <td>M. Johnson</td>
+                  <td>Mar 12, 2026</td>
+                  <td><span class="badge-status badge-submitted">AI/ML</span></td>
+                  <td>
+                    <button class="btn-journal btn-sm-journal" data-toggle="modal" data-target="#assignModal">Assign Reviewer</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#IJID-2026-0121</td>
+                  <td>Zero-Trust Security Architecture for Microservices</td>
+                  <td>A. Okafor, B. Lee</td>
+                  <td>Mar 13, 2026</td>
+                  <td><span class="badge-status badge-submitted">Cybersecurity</span></td>
+                  <td>
+                    <button class="btn-journal btn-sm-journal" data-toggle="modal" data-target="#assignModal">Assign Reviewer</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#IJID-2026-0122</td>
+                  <td>Quantum Error Correction in NISQ-era Processors</td>
+                  <td>K. Weber</td>
+                  <td>Mar 14, 2026</td>
+                  <td><span class="badge-status badge-submitted">Quantum Computing</span></td>
+                  <td>
+                    <button class="btn-journal btn-sm-journal" data-toggle="modal" data-target="#assignModal">Assign Reviewer</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#IJID-2026-0123</td>
+                  <td>Digital Twin Simulation for Urban Traffic Management</td>
+                  <td>T. Yamamoto</td>
+                  <td>Mar 14, 2026</td>
+                  <td><span class="badge-status badge-submitted">IoT</span></td>
+                  <td>
+                    <button class="btn-journal btn-sm-journal" data-toggle="modal" data-target="#assignModal">Assign Reviewer</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- All Submissions Overview -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h5>All Submissions Overview</h5>
+            <div>
+              <select class="form-control form-control-sm d-inline-block" style="width:auto;">
+                <option>All Status</option>
+                <option>Submitted</option>
+                <option>Under Review</option>
+                <option>Revisions Needed</option>
+                <option>Approved</option>
+                <option>Rejected</option>
+                <option>Published</option>
+              </select>
+            </div>
+          </div>
+          <div class="dash-card-body" style="overflow-x:auto;">
+            <table class="submission-table">
+              <thead>
+                <tr>
+                  <th>Paper ID</th>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Reviewer</th>
+                  <th>Status</th>
+                  <th>Last Updated</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#IJID-2026-0078</td>
+                  <td>Transformer Architecture for Code Generation</td>
+                  <td>S. Chen</td>
+                  <td>Dr. A. Singh</td>
+                  <td><span class="badge-status badge-under-review">Under Review</span></td>
+                  <td>Mar 5, 2026</td>
+                  <td><a href="paper-view.html" class="btn-journal-outline btn-sm-journal">View</a></td>
+                </tr>
+                <tr>
+                  <td>#IJID-2026-0085</td>
+                  <td>Blockchain Supply Chain Traceability</td>
+                  <td>J. Martinez</td>
+                  <td>Dr. A. Singh</td>
+                  <td><span class="badge-status badge-under-review">Under Review</span></td>
+                  <td>Mar 8, 2026</td>
+                  <td><a href="paper-view.html" class="btn-journal-outline btn-sm-journal">View</a></td>
+                </tr>
+                <tr>
+                  <td>#IJID-2026-0042</td>
+                  <td>Deep Learning for Low-Resource NLP</td>
+                  <td>L. Kim</td>
+                  <td>Dr. A. Singh</td>
+                  <td><span class="badge-status badge-approved">Approved</span></td>
+                  <td>Feb 28, 2026</td>
+                  <td><a href="paper-view.html" class="btn-journal-outline btn-sm-journal">View</a></td>
+                </tr>
+                <tr>
+                  <td>#IJID-2026-0063</td>
+                  <td>Sentiment Analysis of Vaccine Discourse</td>
+                  <td>P. Dubois</td>
+                  <td>Dr. M. Adler</td>
+                  <td><span class="badge-status badge-rejected">Rejected</span></td>
+                  <td>Feb 20, 2026</td>
+                  <td><a href="paper-view.html" class="btn-journal-outline btn-sm-journal">View</a></td>
+                </tr>
+                <tr>
+                  <td>#IJID-2026-0100</td>
+                  <td>Autonomous Drone Navigation Using RL</td>
+                  <td>R. Gupta</td>
+                  <td>—</td>
+                  <td><span class="badge-status badge-submitted">Submitted</span></td>
+                  <td>Mar 12, 2026</td>
+                  <td>
+                    <button class="btn-journal btn-sm-journal" data-toggle="modal" data-target="#assignModal">Assign</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#IJID-2026-0055</td>
+                  <td>Energy Grid Optimization via Genetic Algorithms</td>
+                  <td>H. Eriksson</td>
+                  <td>Dr. P. Kuo</td>
+                  <td><span class="badge-status badge-revisions">Revisions Needed</span></td>
+                  <td>Mar 1, 2026</td>
+                  <td><a href="paper-view.html" class="btn-journal-outline btn-sm-journal">View</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- User Management -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h5>Recently Registered Users</h5>
+            <a href="#" class="btn-journal-outline btn-sm-journal">Manage All Users</a>
+          </div>
+          <div class="dash-card-body" style="overflow-x:auto;">
+            <table class="submission-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Registered</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Sarah O'Brien</td>
+                  <td>s.obrien@csmail.edu</td>
+                  <td><span class="badge-status badge-submitted">Author</span></td>
+                  <td>Mar 14, 2026</td>
+                  <td>
+                    <a href="#" class="btn-journal-outline btn-sm-journal">View</a>
+                    <a href="#" class="btn-sm-journal" style="color:var(--ijid-accent);margin-left:4px;">Disable</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Dr. Kofi Mensah</td>
+                  <td>k.mensah@accra-u.gh</td>
+                  <td><span class="badge-status badge-under-review">Reviewer</span></td>
+                  <td>Mar 13, 2026</td>
+                  <td>
+                    <a href="#" class="btn-journal-outline btn-sm-journal">View</a>
+                    <a href="#" class="btn-sm-journal" style="color:var(--ijid-accent);margin-left:4px;">Disable</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Ana Petrova</td>
+                  <td>a.petrova@tuberlin.de</td>
+                  <td><span class="badge-status badge-submitted">Author</span></td>
+                  <td>Mar 12, 2026</td>
+                  <td>
+                    <a href="#" class="btn-journal-outline btn-sm-journal">View</a>
+                    <a href="#" class="btn-sm-journal" style="color:var(--ijid-accent);margin-left:4px;">Disable</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Assign Reviewer Modal -->
+    <div class="modal fade" id="assignModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="border-bottom:2px solid var(--ijid-primary);">
+            <h5 class="modal-title" style="color:var(--ijid-primary);">Assign Reviewer</h5>
+            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>Select Reviewer</label>
+              <select class="form-control">
+                <option>-- Choose Reviewer --</option>
+                <option>Dr. Amara Singh (AI/ML, NLP)</option>
+                <option>Dr. Peter Kuo (IoT, Edge Computing)</option>
+                <option>Dr. Maria Adler (Cybersecurity)</option>
+                <option>Dr. Kofi Mensah (Quantum Computing)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Review Deadline</label>
+              <input type="date" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label>Notes for Reviewer (optional)</label>
+              <textarea class="form-control" rows="3" placeholder="Any specific instructions for the reviewer..."></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn-journal-outline" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn-journal">Assign Reviewer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/journal.js"></script>
+  </body>
+</html>

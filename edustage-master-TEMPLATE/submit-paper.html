@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <title>Submit Paper - IJID</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/journal.css" />
+  </head>
+  <body>
+    <!--================ Header =================-->
+    <header class="header_area navbar_fixed">
+      <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid px-4">
+            <a class="navbar-brand logo_h" href="index.html">
+              <strong style="font-size:24px;color:var(--ijid-primary);">IJID</strong>
+            </a>
+            <div class="d-flex align-items-center ml-auto">
+              <div class="nav-notification" id="notifBell" style="cursor:pointer;">
+                <i class="ti-bell" style="font-size:18px;color:var(--ijid-primary);"></i>
+                <span class="badge-count">3</span>
+              </div>
+              <div class="dropdown ml-3">
+                <a class="dropdown-toggle d-flex align-items-center" href="#" role="button" data-toggle="dropdown" style="color:var(--ijid-primary);font-size:14px;">
+                  <img src="img/trainer/t1.jpg" alt="" style="width:35px;height:35px;border-radius:50%;margin-right:8px;object-fit:cover;" />
+                  Dr. Jane Cooper
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#">Profile Settings</a>
+                  <a class="dropdown-item" href="login.html">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!--================ Dashboard =================-->
+    <div class="dashboard-area">
+      <div class="dashboard-sidebar">
+        <div class="sidebar-user">
+          <img src="img/trainer/t1.jpg" alt="" class="user-avatar" />
+          <h5>Dr. Jane Cooper</h5>
+          <span>Author</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="dashboard-author.html"><i class="ti-dashboard"></i> Dashboard</a></li>
+          <li><a href="submit-paper.html" class="active"><i class="ti-pencil-alt"></i> Submit Paper</a></li>
+          <li><a href="#"><i class="ti-files"></i> My Submissions</a></li>
+          <li><a href="#"><i class="ti-comments"></i> Messages</a></li>
+          <li><a href="#"><i class="ti-bell"></i> Notifications</a></li>
+          <li><a href="#"><i class="ti-settings"></i> Profile Settings</a></li>
+          <li><a href="login.html"><i class="ti-power-off"></i> Logout</a></li>
+        </ul>
+      </div>
+
+      <div class="dashboard-content">
+        <h4 class="mb-2">Submit a New Paper</h4>
+        <p class="text-muted mb-4">Fill in the details below to submit your manuscript for review. Fields marked with * are required.</p>
+
+        <form id="submitPaperForm">
+          <!-- Paper Title -->
+          <div class="dash-card">
+            <div class="dash-card-header"><h5>Paper Details</h5></div>
+            <div class="dash-card-body">
+              <div class="form-group">
+                <label>Paper Title *</label>
+                <input type="text" class="form-control" placeholder="Enter the full title of your paper" required />
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Category *</label>
+                    <select class="form-control" required>
+                      <option value="">-- Select Category --</option>
+                      <option>Artificial Intelligence</option>
+                      <option>Machine Learning</option>
+                      <option>Cybersecurity</option>
+                      <option>Data Science</option>
+                      <option>IoT &amp; Edge Computing</option>
+                      <option>Software Engineering</option>
+                      <option>Quantum Computing</option>
+                      <option>Blockchain</option>
+                      <option>Human-Computer Interaction</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Paper Type *</label>
+                    <select class="form-control" required>
+                      <option value="">-- Select Type --</option>
+                      <option>Original Research</option>
+                      <option>Review Article</option>
+                      <option>Short Communication</option>
+                      <option>Case Study</option>
+                      <option>Technical Report</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Tags / Keywords</label>
+                <div class="tags-input-container" id="tagsContainer">
+                  <input type="text" class="tags-input" id="tagsInput" placeholder="Type a keyword and press Enter" />
+                </div>
+                <small class="form-text text-muted">Add up to 6 keywords. Press Enter after each keyword.</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Authors -->
+          <div class="dash-card">
+            <div class="dash-card-header"><h5>Authors</h5></div>
+            <div class="dash-card-body">
+              <div id="authorsContainer">
+                <div class="row mb-3 author-row">
+                  <div class="col-md-4">
+                    <input type="text" class="form-control" placeholder="Full Name *" value="Dr. Jane Cooper" required />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="email" class="form-control" placeholder="Email *" value="jane.cooper@mit.edu" required />
+                  </div>
+                  <div class="col-md-3">
+                    <input type="text" class="form-control" placeholder="Institution" value="MIT" />
+                  </div>
+                  <div class="col-md-1 d-flex align-items-center">
+                    <span class="badge badge-success" style="font-size:11px;">You</span>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="btn-journal-outline btn-sm-journal mt-2" id="addAuthorBtn">
+                <i class="ti-plus"></i> Add Co-Author
+              </button>
+            </div>
+          </div>
+
+          <!-- Abstract -->
+          <div class="dash-card">
+            <div class="dash-card-header"><h5>Abstract *</h5></div>
+            <div class="dash-card-body">
+              <div class="markdown-editor">
+                <div class="editor-toolbar">
+                  <button type="button" class="editor-btn active" data-tab="write"><i class="ti-pencil"></i> Write</button>
+                  <button type="button" class="editor-btn" data-tab="preview"><i class="ti-eye"></i> Preview</button>
+                </div>
+                <div class="editor-area" id="abstractWrite">
+                  <textarea id="abstractText" placeholder="Write your abstract here... Markdown is supported.&#10;&#10;Example:&#10;## Background&#10;This study examines...&#10;&#10;## Methods&#10;We employed...&#10;&#10;## Results&#10;Our findings show..." rows="10"></textarea>
+                </div>
+                <div class="editor-area" id="abstractPreview" style="display:none;">
+                  <div class="preview-content" id="abstractPreviewContent"></div>
+                </div>
+              </div>
+              <small class="form-text text-muted">250–350 words recommended. Markdown formatting supported.</small>
+            </div>
+          </div>
+
+          <!-- File Upload -->
+          <div class="dash-card">
+            <div class="dash-card-header"><h5>Manuscript Upload *</h5></div>
+            <div class="dash-card-body">
+              <div class="file-upload-area" id="manuscriptUpload">
+                <i class="ti-cloud-up" style="font-size:40px;color:var(--ijid-secondary);"></i>
+                <h5>Drag & Drop your manuscript here</h5>
+                <p>or click to browse files</p>
+                <span class="text-muted" style="font-size:13px;">Accepted formats: PDF, DOCX, LaTeX (.tex) — Max 25MB</span>
+                <input type="file" id="manuscriptFile" accept=".pdf,.docx,.doc,.tex" style="display:none;" />
+              </div>
+              <div id="manuscriptFileInfo" class="mt-2" style="display:none;">
+                <div class="d-flex align-items-center p-2" style="background:#f8f9fa;border-radius:6px;">
+                  <i class="ti-file mr-2" style="color:var(--ijid-primary);"></i>
+                  <span id="manuscriptFileName" class="mr-3"></span>
+                  <span id="manuscriptFileSize" class="text-muted mr-auto"></span>
+                  <button type="button" class="btn btn-sm btn-link text-danger" id="removeManuscript"><i class="ti-close"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Supplementary Files -->
+          <div class="dash-card">
+            <div class="dash-card-header"><h5>Supplementary Files (Optional)</h5></div>
+            <div class="dash-card-body">
+              <div class="file-upload-area" id="supplementaryUpload">
+                <i class="ti-gallery" style="font-size:35px;color:var(--ijid-secondary);"></i>
+                <h5>Upload supplementary materials</h5>
+                <p>Figures, datasets, code, or additional documents</p>
+                <span class="text-muted" style="font-size:13px;">Accepted: PDF, DOCX, PNG, JPG, ZIP, CSV — Max 50MB total</span>
+                <input type="file" id="supplementaryFiles" multiple style="display:none;" />
+              </div>
+              <div id="supplementaryFilesList" class="mt-2"></div>
+            </div>
+          </div>
+
+          <!-- Cover Letter -->
+          <div class="dash-card">
+            <div class="dash-card-header"><h5>Cover Letter (Optional)</h5></div>
+            <div class="dash-card-body">
+              <textarea class="form-control" rows="5" placeholder="Write a brief cover letter for the editor. Explain the significance and novelty of your research..."></textarea>
+            </div>
+          </div>
+
+          <!-- Declarations -->
+          <div class="dash-card">
+            <div class="dash-card-header"><h5>Declarations</h5></div>
+            <div class="dash-card-body">
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="originalWork" required />
+                <label class="form-check-label" for="originalWork">
+                  I confirm this manuscript is original work and has not been published or submitted elsewhere. *
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="coAuthorConsent" />
+                <label class="form-check-label" for="coAuthorConsent">
+                  All co-authors have reviewed and approved the final version of this manuscript.
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="conflictInterest" />
+                <label class="form-check-label" for="conflictInterest">
+                  I declare no conflicts of interest related to this research.
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Buttons -->
+          <div class="d-flex justify-content-between align-items-center mt-4 mb-5">
+            <button type="button" class="btn-journal-outline" id="saveDraftBtn">
+              <i class="ti-save"></i> Save as Draft
+            </button>
+            <button type="submit" class="btn-journal" id="submitPaperBtn">
+              <i class="ti-check"></i> Submit for Review
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/journal.js"></script>
+  </body>
+</html>

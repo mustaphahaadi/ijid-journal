@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <title>Browse Papers - IJID</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/journal.css" />
+  </head>
+  <body>
+    <!--================ Header =================-->
+    <header class="header_area navbar_fixed">
+      <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <a class="navbar-brand logo_h" href="index.html">
+              <strong style="font-size:24px;color:var(--ijid-primary);">IJID</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+              <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse offset" id="navbarNav">
+              <ul class="nav navbar-nav menu_nav ml-auto mr-3">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item active"><a class="nav-link" href="browse-papers.html">Browse Papers</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item submenu dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">For Authors</a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item"><a class="nav-link" href="submit-paper.html">Submit Paper</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Author Guidelines</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              </ul>
+              <div class="d-flex">
+                <a class="btn-journal-outline btn-sm-journal mr-2" href="login.html">Login</a>
+                <a class="btn-journal btn-sm-journal" href="register.html">Sign Up</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!--================ Page Header =================-->
+    <section class="page-header" style="background:var(--ijid-primary);padding:140px 0 60px;color:#fff;">
+      <div class="container">
+        <h2>Browse Published Papers</h2>
+        <p style="opacity:0.9;">Explore peer-reviewed research across all disciplines</p>
+      </div>
+    </section>
+
+    <!--================ Browse Area =================-->
+    <section class="browse-area" style="padding:60px 0;">
+      <div class="container">
+        <!-- Search Box -->
+        <div class="search-box-lg mb-5">
+          <form class="d-flex">
+            <input type="text" class="form-control form-control-lg" placeholder="Search papers by title, author, keyword, or DOI..." style="border-radius:8px 0 0 8px;border:2px solid var(--ijid-primary);border-right:none;" />
+            <button class="btn-journal" type="submit" style="border-radius:0 8px 8px 0;padding:0 30px;white-space:nowrap;">
+              <i class="ti-search"></i> Search
+            </button>
+          </form>
+        </div>
+
+        <div class="row">
+          <!-- Filter Sidebar -->
+          <div class="col-lg-3">
+            <div class="filter-sidebar">
+              <h5 class="mb-4" style="color:var(--ijid-primary);">Filter Results</h5>
+
+              <div class="filter-group mb-4">
+                <h6>Category</h6>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="catAI" /><label class="form-check-label" for="catAI">Artificial Intelligence (24)</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="catML" /><label class="form-check-label" for="catML">Machine Learning (18)</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="catCS" /><label class="form-check-label" for="catCS">Cybersecurity (15)</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="catDS" /><label class="form-check-label" for="catDS">Data Science (12)</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="catIoT" /><label class="form-check-label" for="catIoT">IoT &amp; Edge Computing (8)</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="catSE" /><label class="form-check-label" for="catSE">Software Engineering (10)</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="catQC" /><label class="form-check-label" for="catQC">Quantum Computing (5)</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="catBC" /><label class="form-check-label" for="catBC">Blockchain (7)</label></div>
+              </div>
+
+              <div class="filter-group mb-4">
+                <h6>Publication Year</h6>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="y2026" checked /><label class="form-check-label" for="y2026">2026 (34)</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="y2025" /><label class="form-check-label" for="y2025">2025 (55)</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="y2024" /><label class="form-check-label" for="y2024">2024 (42)</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="y2023" /><label class="form-check-label" for="y2023">2023 (38)</label></div>
+              </div>
+
+              <div class="filter-group mb-4">
+                <h6>Paper Type</h6>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="typeOR" /><label class="form-check-label" for="typeOR">Original Research (62)</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="typeRev" /><label class="form-check-label" for="typeRev">Review Article (18)</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="typeSC" /><label class="form-check-label" for="typeSC">Short Communication (9)</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="typeCS" /><label class="form-check-label" for="typeCS">Case Study (5)</label></div>
+              </div>
+
+              <div class="filter-group mb-4">
+                <h6>Sort By</h6>
+                <select class="form-control form-control-sm">
+                  <option>Most Recent</option>
+                  <option>Most Cited</option>
+                  <option>Most Viewed</option>
+                  <option>Alphabetical (A-Z)</option>
+                </select>
+              </div>
+
+              <button class="btn-journal btn-block" style="font-size:14px;">Apply Filters</button>
+              <button class="btn-journal-outline btn-block mt-2" style="font-size:14px;">Clear All</button>
+            </div>
+          </div>
+
+          <!-- Paper Results -->
+          <div class="col-lg-9">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <p class="mb-0 text-muted">Showing <strong>1–6</strong> of <strong>89</strong> published papers</p>
+            </div>
+
+            <!-- Paper Card 1 -->
+            <div class="paper-card mb-4">
+              <div class="paper-card-body">
+                <span class="paper-category">Artificial Intelligence</span>
+                <h5><a href="paper-view.html" style="color:var(--ijid-primary);">Transformer Architecture for Code Generation Tasks</a></h5>
+                <p class="paper-authors"><i class="ti-user"></i> S. Chen, W. Liu, T. Park &nbsp;|&nbsp; Stanford University</p>
+                <p class="paper-abstract">This paper presents a novel transformer-based architecture optimized for automated code generation tasks. We introduce CodeFormer, leveraging hierarchical attention mechanisms and syntax-aware positional encodings to generate syntactically correct code from natural language descriptions...</p>
+                <div class="paper-meta d-flex flex-wrap align-items-center">
+                  <span class="mr-3"><i class="ti-calendar"></i> Published: Mar 10, 2026</span>
+                  <span class="mr-3"><i class="ti-eye"></i> 1,245 views</span>
+                  <span class="mr-3"><i class="ti-quote-right"></i> 8 citations</span>
+                  <span class="mr-3"><i class="ti-link"></i> DOI: 10.1234/ijid.2026.0078</span>
+                </div>
+                <div class="paper-tags mt-2">
+                  <span class="tag">Transformer</span>
+                  <span class="tag">Code Generation</span>
+                  <span class="tag">NLP</span>
+                  <span class="tag">Deep Learning</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paper Card 2 -->
+            <div class="paper-card mb-4">
+              <div class="paper-card-body">
+                <span class="paper-category">Machine Learning</span>
+                <h5><a href="paper-view.html" style="color:var(--ijid-primary);">Federated Learning with Differential Privacy for Healthcare Data</a></h5>
+                <p class="paper-authors"><i class="ti-user"></i> M. Johnson, A. Williams &nbsp;|&nbsp; Johns Hopkins University</p>
+                <p class="paper-abstract">We propose a federated learning framework enhanced with differential privacy guarantees for training machine learning models on sensitive healthcare data distributed across multiple hospitals without centralizing patient records...</p>
+                <div class="paper-meta d-flex flex-wrap align-items-center">
+                  <span class="mr-3"><i class="ti-calendar"></i> Published: Feb 28, 2026</span>
+                  <span class="mr-3"><i class="ti-eye"></i> 982 views</span>
+                  <span class="mr-3"><i class="ti-quote-right"></i> 12 citations</span>
+                  <span class="mr-3"><i class="ti-link"></i> DOI: 10.1234/ijid.2026.0065</span>
+                </div>
+                <div class="paper-tags mt-2">
+                  <span class="tag">Federated Learning</span>
+                  <span class="tag">Privacy</span>
+                  <span class="tag">Healthcare</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paper Card 3 -->
+            <div class="paper-card mb-4">
+              <div class="paper-card-body">
+                <span class="paper-category">Cybersecurity</span>
+                <h5><a href="paper-view.html" style="color:var(--ijid-primary);">Zero-Trust Security Architecture for Cloud-Native Microservices</a></h5>
+                <p class="paper-authors"><i class="ti-user"></i> A. Okafor, B. Lee &nbsp;|&nbsp; Carnegie Mellon University</p>
+                <p class="paper-abstract">This research introduces a comprehensive zero-trust security framework designed specifically for cloud-native microservice architectures. We address the challenges of service-to-service authentication, dynamic policy enforcement, and real-time threat detection...</p>
+                <div class="paper-meta d-flex flex-wrap align-items-center">
+                  <span class="mr-3"><i class="ti-calendar"></i> Published: Feb 15, 2026</span>
+                  <span class="mr-3"><i class="ti-eye"></i> 756 views</span>
+                  <span class="mr-3"><i class="ti-quote-right"></i> 5 citations</span>
+                  <span class="mr-3"><i class="ti-link"></i> DOI: 10.1234/ijid.2026.0052</span>
+                </div>
+                <div class="paper-tags mt-2">
+                  <span class="tag">Zero-Trust</span>
+                  <span class="tag">Microservices</span>
+                  <span class="tag">Cloud Security</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paper Card 4 -->
+            <div class="paper-card mb-4">
+              <div class="paper-card-body">
+                <span class="paper-category">Data Science</span>
+                <h5><a href="paper-view.html" style="color:var(--ijid-primary);">Causal Inference Methods for Observational Health Studies: A Comparative Analysis</a></h5>
+                <p class="paper-authors"><i class="ti-user"></i> R. Patel, N. Yamamoto, C. Dubois &nbsp;|&nbsp; University of Oxford</p>
+                <p class="paper-abstract">We conduct a comprehensive comparative analysis of modern causal inference methods applied to large-scale observational health studies, evaluating propensity score matching, instrumental variables, regression discontinuity, and double machine learning approaches...</p>
+                <div class="paper-meta d-flex flex-wrap align-items-center">
+                  <span class="mr-3"><i class="ti-calendar"></i> Published: Jan 30, 2026</span>
+                  <span class="mr-3"><i class="ti-eye"></i> 1,102 views</span>
+                  <span class="mr-3"><i class="ti-quote-right"></i> 15 citations</span>
+                  <span class="mr-3"><i class="ti-link"></i> DOI: 10.1234/ijid.2026.0038</span>
+                </div>
+                <div class="paper-tags mt-2">
+                  <span class="tag">Causal Inference</span>
+                  <span class="tag">Health Data</span>
+                  <span class="tag">Statistics</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paper Card 5 -->
+            <div class="paper-card mb-4">
+              <div class="paper-card-body">
+                <span class="paper-category">IoT &amp; Edge Computing</span>
+                <h5><a href="paper-view.html" style="color:var(--ijid-primary);">Edge Computing Architectures for Real-Time IoT Analytics in Smart Cities</a></h5>
+                <p class="paper-authors"><i class="ti-user"></i> W. Thompson &nbsp;|&nbsp; ETH Zurich</p>
+                <p class="paper-abstract">This paper proposes a hierarchical edge computing architecture optimized for real-time analytics in smart city IoT deployments. We demonstrate how task offloading and model partitioning strategies can reduce end-to-end latency by 62%...</p>
+                <div class="paper-meta d-flex flex-wrap align-items-center">
+                  <span class="mr-3"><i class="ti-calendar"></i> Published: Jan 15, 2026</span>
+                  <span class="mr-3"><i class="ti-eye"></i> 634 views</span>
+                  <span class="mr-3"><i class="ti-quote-right"></i> 3 citations</span>
+                  <span class="mr-3"><i class="ti-link"></i> DOI: 10.1234/ijid.2026.0022</span>
+                </div>
+                <div class="paper-tags mt-2">
+                  <span class="tag">Edge Computing</span>
+                  <span class="tag">IoT</span>
+                  <span class="tag">Smart Cities</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paper Card 6 -->
+            <div class="paper-card mb-4">
+              <div class="paper-card-body">
+                <span class="paper-category">Quantum Computing</span>
+                <h5><a href="paper-view.html" style="color:var(--ijid-primary);">Quantum Error Correction Techniques for NISQ-era Processors</a></h5>
+                <p class="paper-authors"><i class="ti-user"></i> K. Weber, H. Nakamura &nbsp;|&nbsp; Max Planck Institute</p>
+                <p class="paper-abstract">We survey and benchmark five leading quantum error correction techniques suitable for near-term noisy intermediate-scale quantum processors, providing practical implementation guidelines and performance comparisons on IBM and Google quantum hardware...</p>
+                <div class="paper-meta d-flex flex-wrap align-items-center">
+                  <span class="mr-3"><i class="ti-calendar"></i> Published: Dec 20, 2025</span>
+                  <span class="mr-3"><i class="ti-eye"></i> 890 views</span>
+                  <span class="mr-3"><i class="ti-quote-right"></i> 19 citations</span>
+                  <span class="mr-3"><i class="ti-link"></i> DOI: 10.1234/ijid.2025.0198</span>
+                </div>
+                <div class="paper-tags mt-2">
+                  <span class="tag">Quantum Computing</span>
+                  <span class="tag">Error Correction</span>
+                  <span class="tag">NISQ</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav class="mt-4">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled"><a class="page-link" href="#">&laquo; Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#" style="background:var(--ijid-primary);border-color:var(--ijid-primary);">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">...</a></li>
+                <li class="page-item"><a class="page-link" href="#">15</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next &raquo;</a></li>
+              </ul>
+            </nav>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--================ Footer =================-->
+    <footer style="background:var(--ijid-primary);padding:40px 0 20px;color:rgba(255,255,255,0.8);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5 style="color:#fff;">IJID — International Journal of Innovative Discoveries</h5>
+            <p style="font-size:14px;">ISSN: 2026-XXXX &nbsp;|&nbsp; Open Access &nbsp;|&nbsp; Peer Reviewed</p>
+          </div>
+          <div class="col-md-6 text-md-right">
+            <p style="font-size:14px;">&copy; 2026 IJID. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/journal.js"></script>
+  </body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <title>Author Dashboard - IJID</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/journal.css" />
+  </head>
+  <body>
+    <!--================ Header =================-->
+    <header class="header_area navbar_fixed">
+      <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid px-4">
+            <a class="navbar-brand logo_h" href="index.html">
+              <strong style="font-size:24px;color:var(--ijid-primary);">IJID</strong>
+            </a>
+            <div class="d-flex align-items-center ml-auto">
+              <!-- Notifications -->
+              <div class="nav-notification" id="notifBell" style="cursor:pointer;">
+                <i class="ti-bell" style="font-size:18px;color:var(--ijid-primary);"></i>
+                <span class="badge-count">3</span>
+                <div class="notifications-dropdown" id="notifDropdown">
+                  <div class="notif-header">
+                    <h6>Notifications</h6>
+                    <a href="#" style="font-size:12px;color:var(--ijid-secondary);">Mark all read</a>
+                  </div>
+                  <div class="notif-list">
+                    <div class="notif-item unread">
+                      <div class="notif-icon bg-success-light"><i class="ti-check"></i></div>
+                      <div class="notif-text">
+                        <p><strong>Paper Accepted!</strong> Your paper "Deep Learning Approaches..." has been approved.</p>
+                        <small>2 hours ago</small>
+                      </div>
+                    </div>
+                    <div class="notif-item unread">
+                      <div class="notif-icon bg-warning-light"><i class="ti-comments"></i></div>
+                      <div class="notif-text">
+                        <p><strong>Revisions Requested</strong> for "Novel Biosensor Design..." by Reviewer #2.</p>
+                        <small>1 day ago</small>
+                      </div>
+                    </div>
+                    <div class="notif-item unread">
+                      <div class="notif-icon bg-primary-light"><i class="ti-email"></i></div>
+                      <div class="notif-text">
+                        <p>New message from <strong>Dr. Singh</strong> regarding your submission.</p>
+                        <small>2 days ago</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- User -->
+              <div class="dropdown ml-3">
+                <a class="dropdown-toggle d-flex align-items-center" href="#" role="button" data-toggle="dropdown" style="color:var(--ijid-primary);font-size:14px;">
+                  <img src="img/trainer/t1.jpg" alt="" style="width:35px;height:35px;border-radius:50%;margin-right:8px;object-fit:cover;" />
+                  Dr. Sarah Chen
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#">Profile Settings</a>
+                  <a class="dropdown-item" href="login.html">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!--================ Dashboard =================-->
+    <div class="dashboard-area">
+      <!-- Sidebar -->
+      <div class="dashboard-sidebar">
+        <div class="sidebar-user">
+          <img src="img/trainer/t1.jpg" alt="" class="user-avatar" />
+          <h5>Dr. Sarah Chen</h5>
+          <span>Author</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="dashboard-author.html" class="active"><i class="ti-dashboard"></i> Dashboard</a></li>
+          <li><a href="submit-paper.html"><i class="ti-pencil-alt"></i> Submit Paper</a></li>
+          <li><a href="#"><i class="ti-files"></i> My Submissions</a></li>
+          <li><a href="#"><i class="ti-comments"></i> Messages</a></li>
+          <li><a href="#"><i class="ti-bell"></i> Notifications</a></li>
+          <li><a href="#"><i class="ti-settings"></i> Profile Settings</a></li>
+          <li><a href="login.html"><i class="ti-power-off"></i> Logout</a></li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="dashboard-content">
+        <h4 class="mb-4">Author Dashboard</h4>
+
+        <!-- Stats Row -->
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-icon bg-primary-light"><i class="ti-files"></i></div>
+              <div class="stat-info">
+                <h3>8</h3>
+                <p>Total Submissions</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-icon bg-warning-light"><i class="ti-time"></i></div>
+              <div class="stat-info">
+                <h3>2</h3>
+                <p>Under Review</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-icon bg-success-light"><i class="ti-check-box"></i></div>
+              <div class="stat-info">
+                <h3>5</h3>
+                <p>Published</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-icon bg-danger-light"><i class="ti-alert"></i></div>
+              <div class="stat-info">
+                <h3>1</h3>
+                <p>Revisions Needed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submissions Table -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h5>My Submissions</h5>
+            <a href="submit-paper.html" class="btn-journal btn-sm-journal"><i class="ti-plus mr-1"></i> New Submission</a>
+          </div>
+          <div class="dash-card-body" style="overflow-x:auto;">
+            <table class="submission-table">
+              <thead>
+                <tr>
+                  <th>Paper ID</th>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Submitted</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#IJID-2026-0042</td>
+                  <td><a href="paper-view.html" class="paper-title-link">Deep Learning Approaches for NLP in Low-Resource Languages</a></td>
+                  <td>Computer Science</td>
+                  <td>Jan 15, 2026</td>
+                  <td><span class="badge-status badge-published">Published</span></td>
+                  <td><a href="paper-view.html" class="btn-journal-outline btn-sm-journal">View</a></td>
+                </tr>
+                <tr>
+                  <td>#IJID-2026-0078</td>
+                  <td><a href="review-paper.html" class="paper-title-link">Transformer Architecture for Code Generation Tasks</a></td>
+                  <td>AI / ML</td>
+                  <td>Feb 20, 2026</td>
+                  <td><span class="badge-status badge-under-review">Under Review</span></td>
+                  <td><a href="review-paper.html" class="btn-journal-outline btn-sm-journal">Track</a></td>
+                </tr>
+                <tr>
+                  <td>#IJID-2026-0091</td>
+                  <td><a href="review-paper.html" class="paper-title-link">Privacy-Preserving Federated Learning in Healthcare</a></td>
+                  <td>Computer Science</td>
+                  <td>Mar 1, 2026</td>
+                  <td><span class="badge-status badge-revisions">Revisions Requested</span></td>
+                  <td>
+                    <a href="submit-paper.html" class="btn-journal btn-sm-journal">Revise</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#IJID-2026-0103</td>
+                  <td><a href="#" class="paper-title-link">Quantum Computing for Drug Discovery Optimization</a></td>
+                  <td>Quantum Computing</td>
+                  <td>Mar 8, 2026</td>
+                  <td><span class="badge-status badge-submitted">Submitted</span></td>
+                  <td><a href="#" class="btn-journal-outline btn-sm-journal">Track</a></td>
+                </tr>
+                <tr>
+                  <td>#IJID-2025-0245</td>
+                  <td><a href="paper-view.html" class="paper-title-link">Reinforcement Learning in Autonomous Navigation</a></td>
+                  <td>Robotics</td>
+                  <td>Sep 12, 2025</td>
+                  <td><span class="badge-status badge-published">Published</span></td>
+                  <td><a href="paper-view.html" class="btn-journal-outline btn-sm-journal">View</a></td>
+                </tr>
+                <tr>
+                  <td>#IJID-2025-0310</td>
+                  <td><a href="#" class="paper-title-link">Graph Neural Networks for Social Network Analysis</a></td>
+                  <td>Data Science</td>
+                  <td>Nov 5, 2025</td>
+                  <td><span class="badge-status badge-approved">Approved</span></td>
+                  <td><a href="#" class="btn-journal-outline btn-sm-journal">View</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Recent Feedback & Deadlines -->
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h5>Recent Reviewer Feedback</h5>
+              </div>
+              <div class="dash-card-body">
+                <div class="comment-thread">
+                  <div class="comment-item">
+                    <img src="img/trainer/t2.jpg" alt="" class="comment-avatar" />
+                    <div class="comment-body">
+                      <h6>Reviewer #2 <span class="badge-status badge-revisions ml-2">Revisions</span></h6>
+                      <p class="comment-date">On "Privacy-Preserving Federated Learning..." &bull; March 5, 2026</p>
+                      <p>The methodology section needs more detail on the differential privacy mechanisms used. Please also include additional experiments comparing with non-federated baselines on the MIMIC-III dataset.</p>
+                    </div>
+                  </div>
+                  <div class="comment-item">
+                    <img src="img/trainer/t3.jpg" alt="" class="comment-avatar" />
+                    <div class="comment-body">
+                      <h6>Reviewer #1 <span class="badge-status badge-approved ml-2">Positive</span></h6>
+                      <p class="comment-date">On "Transformer Architecture for Code..." &bull; March 3, 2026</p>
+                      <p>Strong contribution. The ablation study is thorough. Minor revisions suggested: fix Table 3 formatting and add reference to recent work by Zhang et al. (2025).</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h5>Upcoming Deadlines</h5>
+              </div>
+              <div class="dash-card-body">
+                <div class="d-flex align-items-center p-2 mb-3" style="background:var(--ijid-light);border-radius:8px;">
+                  <div class="stat-icon bg-danger-light mr-3" style="width:45px;height:45px;min-width:45px;font-size:16px;">
+                    <i class="ti-alarm-clock"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0" style="font-size:14px;">Revision Due</h6>
+                    <small class="text-muted">Privacy-Preserving FL... &bull; <strong style="color:var(--ijid-accent);">Mar 20, 2026</strong></small>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center p-2 mb-3" style="background:var(--ijid-light);border-radius:8px;">
+                  <div class="stat-icon bg-warning-light mr-3" style="width:45px;height:45px;min-width:45px;font-size:16px;">
+                    <i class="ti-calendar"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0" style="font-size:14px;">Special Issue Deadline</h6>
+                    <small class="text-muted">AI and Society &bull; Jun 30, 2026</small>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center p-2" style="background:var(--ijid-light);border-radius:8px;">
+                  <div class="stat-icon bg-primary-light mr-3" style="width:45px;height:45px;min-width:45px;font-size:16px;">
+                    <i class="ti-write"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0" style="font-size:14px;">Camera-Ready Version</h6>
+                    <small class="text-muted">Transformer Architecture... &bull; Apr 15, 2026</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/journal.js"></script>
+  </body>
+</html>
