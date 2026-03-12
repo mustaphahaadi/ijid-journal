@@ -586,11 +586,12 @@ a:hover {
    ============================================ */
 .journal_banner {
   background: var(--ijid-primary);
-  min-height: 620px;
+  min-height: 680px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
   overflow: hidden;
+  padding: 155px 0 96px;
 }
 .journal_banner::before {
   display: none;
@@ -598,6 +599,8 @@ a:hover {
 .journal_banner .banner_content {
   position: relative;
   z-index: 2;
+  width: 100%;
+  padding-top: 10px;
 }
 .journal_banner .banner_content h1 {
   color: #fff;
@@ -645,7 +648,8 @@ a:hover {
 
 @media (max-width: 767px) {
   .journal_banner {
-    min-height: 450px;
+    min-height: auto;
+    padding: 148px 0 84px;
   }
   .journal_banner .banner_content h1 {
     font-size: 30px;
