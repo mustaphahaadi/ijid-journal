@@ -2161,6 +2161,37 @@ body {
 }
 
 @media (max-width: 991px) {
+  .header_area.header_on_primary {
+    padding-top: 12px;
+  }
+
+  .header_area.header_on_primary .navbar {
+    min-height: 72px;
+    height: 72px;
+    padding: 0 18px;
+    overflow: visible;
+  }
+
+  .header_area.header_on_primary .navbar > .container,
+  .header_area.header_on_primary .navbar > .container-fluid {
+    min-height: 72px;
+  }
+
+  .header_area .navbar-toggler {
+    padding: 0;
+    border: 0;
+    min-width: 42px;
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header_area .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
   .header_area .navbar .nav .nav-item {
     margin-right: 0;
   }
@@ -2172,8 +2203,8 @@ body {
 
   .header_area .navbar-collapse {
     background: #fff;
-    padding: 16px 20px;
-    margin-top: 12px;
+    padding: 14px 18px 18px;
+    margin-top: 10px;
     border-radius: 16px;
     box-shadow: 0 16px 32px rgba(0,35,71,0.12);
   }
@@ -2203,15 +2234,16 @@ body {
   }
 
   .header_area .navbar-collapse .navbar-nav {
-    padding-top: 6px;
+    padding-top: 2px;
   }
 
   .header_area .navbar-collapse .nav-item {
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
 
   .header_area .navbar-collapse .nav-item .nav-link {
-    padding: 10px 0;
+    padding: 9px 0;
+    line-height: 1.35;
   }
 
   .header_area .navbar-collapse > .d-flex,
@@ -2244,7 +2276,7 @@ body {
 
   .journal_banner {
     min-height: auto;
-    padding: 160px 0 88px;
+    padding: 146px 0 82px;
   }
 
   .journal-feature-area,
@@ -2452,7 +2484,7 @@ body {
 
 @media (max-width: 767px) {
   .page-header {
-    padding: 132px 0 56px !important;
+    padding: 116px 0 48px !important;
   }
 
   .page-header h2 {
@@ -2472,13 +2504,34 @@ body {
   }
 
   .header_area.header_on_primary {
-    padding-top: 12px;
+    padding-top: 8px;
   }
 
   .header_area.header_on_primary .navbar {
-    padding: 0 16px;
-    border-radius: 16px;
-    min-height: 72px;
+    padding: 0 14px;
+    border-radius: 14px;
+    min-height: 64px;
+    height: 64px;
+  }
+
+  .header_area.header_on_primary .navbar > .container,
+  .header_area.header_on_primary .navbar > .container-fluid {
+    min-height: 64px;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+  }
+
+  .header_area.header_on_primary .navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 12px;
+    line-height: 1;
+  }
+
+  .header_area.header_on_primary .brand-mark {
+    font-size: 22px;
+    line-height: 1;
   }
 
   .header_area.header_on_primary.navbar_fixed .main_menu .navbar {
@@ -2489,6 +2542,16 @@ body {
     gap: 10px;
     margin-left: auto !important;
     min-width: 0;
+  }
+
+  .header_area .navbar-collapse {
+    padding: 12px 16px 16px;
+    margin-top: 8px;
+    border-radius: 14px;
+  }
+
+  .header_area .navbar-collapse .nav-item .nav-link {
+    padding: 8px 0;
   }
 
   .profile-toggle {
@@ -2529,7 +2592,7 @@ body {
   }
 
   .journal_banner {
-    padding: 142px 0 72px;
+    padding: 126px 0 66px;
   }
 
   .journal_banner .banner_content {
@@ -2876,13 +2939,33 @@ body {
 
 @media (max-width: 575px) {
   .header_area .navbar-collapse {
-    padding: 14px 16px;
-    margin-top: 10px;
-    border-radius: 14px;
+    padding: 12px 14px 14px;
+    margin-top: 6px;
+    border-radius: 12px;
   }
 
   .header_area.navbar_fixed .navbar .container-fluid > .d-flex.align-items-center.ml-auto {
     gap: 8px;
+  }
+
+  .header_area.header_on_primary {
+    padding-top: 6px;
+  }
+
+  .header_area.header_on_primary .navbar {
+    min-height: 60px;
+    height: 60px;
+    padding: 0 12px;
+    border-radius: 12px;
+  }
+
+  .header_area.header_on_primary .navbar > .container,
+  .header_area.header_on_primary .navbar > .container-fluid {
+    min-height: 60px;
+  }
+
+  .header_area.header_on_primary .brand-mark {
+    font-size: 20px;
   }
 
   .profile-toggle {
@@ -2895,7 +2978,7 @@ body {
   }
 
   .page-header {
-    padding: 124px 0 52px !important;
+    padding: 104px 0 42px !important;
   }
 
   .page-header h2 {
@@ -2909,6 +2992,10 @@ body {
 
   .journal_banner .banner_content h1 {
     font-size: 28px;
+  }
+
+  .journal_banner {
+    padding: 118px 0 60px;
   }
 
   .journal_banner .banner_content h2 {
