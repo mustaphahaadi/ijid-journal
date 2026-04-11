@@ -5,6 +5,126 @@
 (function ($) {
   "use strict";
 
+  var toastContainer = null;
+
+  function ensureToastContainer() {
+    if (toastContainer && toastContainer.length) return toastContainer;
+    toastContainer = $('<div class="ijid-toast-stack" aria-live="polite" aria-atomic="false"></div>');
+    $("body").append(toastContainer);
+    return toastContainer;
+  }
+
+  function showToast(message, type, duration) {
+    var safeType = type || "info";
+    var safeDuration = duration || 2600;
+    var icons = {
+      success: "ti-check-box",
+      warning: "ti-alert",
+      error: "ti-close",
+      info: "ti-info-alt",
+    };
+
+    var iconClass = icons[safeType] || icons.info;
+    var toast = $(
+      '<div class="ijid-toast ijid-toast-' +
+        safeType +
+        '"><i class="' +
+        iconClass +
+        '"></i><span>' +
+        $("<span>").text(message).html() +
+        "</span></div>"
+    );
+
+    ensureToastContainer().append(toast);
+    requestAnimationFrame(function () {
+      toast.addClass("is-visible");
+    });
+
+    setTimeout(function () {
+      toast.removeClass("is-visible");
+      setTimeout(function () {
+        toast.remove();
+      }, 220);
+    }, safeDuration);
+  }
+
+  function flashButton($button, doneText) {
+    if (!$button || !$button.length) return;
+    var originalHtml = $button.html();
+    $button.addClass("is-loading").prop("disabled", true);
+    setTimeout(function () {
+      if (doneText) {
+        $button.html(doneText);
+      }
+      $button.removeClass("is-loading").prop("disabled", false);
+      setTimeout(function () {
+        $button.html(originalHtml);
+      }, 900);
+    }, 700);
+  }
+
+  function normalizeHref(href) {
+    if (!href || href === "#") return "";
+    return href.split("#")[0].split("?")[0].replace(/^\.\//, "");
+  }
+
+  function applyActiveNavState() {
+    var currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+    $(".menu_nav .nav-item").removeClass("active");
+    $(".menu_nav .nav-link, .dashboard-sidebar .nav-menu li a").removeClass("is-current");
+
+    var directMatch = null;
+    $(".menu_nav .nav-link, .dashboard-sidebar .nav-menu li a").each(function () {
+      var href = normalizeHref($(this).attr("href"));
+      if (!href) return;
+      if (href === currentPage) {
+        directMatch = $(this);
+      }
+    });
+
+    if (directMatch && directMatch.length) {
+      directMatch.addClass("is-current");
+      directMatch.closest(".nav-item").addClass("active");
+      directMatch.closest(".submenu").addClass("active");
+    }
+  }
+
+  function ensureSkipLink() {
+    if ($(".skip-to-content").length) return;
+    var $mainTarget = $("#mainContent");
+    if (!$mainTarget.length) {
+      $mainTarget = $("main").first();
+    }
+    if (!$mainTarget.length) {
+      $mainTarget = $(".journal_banner, .page-header, .dashboard-area, .auth-section").first();
+    }
+    if ($mainTarget.length && !$mainTarget.attr("id")) {
+      $mainTarget.attr("id", "mainContent");
+    }
+    if ($mainTarget.length) {
+      $("body").prepend('<a class="skip-to-content" href="#' + $mainTarget.attr("id") + '">Skip to content</a>');
+    }
+  }
+
+  function initScrollTopButton() {
+    if ($(".ijid-scroll-top").length) return;
+    var $button = $('<button type="button" class="ijid-scroll-top" aria-label="Back to top"><i class="ti-angle-up"></i></button>');
+    $("body").append($button);
+
+    $(window).on("scroll", function () {
+      if ($(window).scrollTop() > 360) {
+        $button.addClass("is-visible");
+      } else {
+        $button.removeClass("is-visible");
+      }
+    });
+
+    $button.on("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
   // ========================================
   // Role Selector (Register Page)
   // ========================================
@@ -18,15 +138,22 @@
   // ========================================
   // Notification Bell Toggle
   // ========================================
+  var $notifDropdown = $(".notification-dropdown, .notifications-dropdown");
+
   $("#notifBell").on("click", function (e) {
     e.stopPropagation();
-    $(".notification-dropdown").toggleClass("show");
+    $notifDropdown.toggleClass("show");
   });
   $(document).on("click", function () {
-    $(".notification-dropdown").removeClass("show");
+    $notifDropdown.removeClass("show");
   });
-  $(".notification-dropdown").on("click", function (e) {
+  $notifDropdown.on("click", function (e) {
     e.stopPropagation();
+  });
+  $(document).on("keydown", function (e) {
+    if (e.key === "Escape") {
+      $notifDropdown.removeClass("show");
+    }
   });
 
   // ========================================
@@ -243,28 +370,44 @@
   $("#submitPaperForm").on("submit", function (e) {
     e.preventDefault();
     if (!$("#originalWork").is(":checked")) {
-      alert("Please confirm the originality declaration.");
+      showToast("Please confirm the originality declaration.", "warning", 3200);
       return;
     }
-    alert(
-      "Paper submitted successfully! You will receive a confirmation email shortly."
+    flashButton($("#submitPaperBtn"), '<i class="ti-check"></i> Submitted');
+    showToast(
+      "Paper submitted successfully. A confirmation email is on the way.",
+      "success",
+      3200
     );
   });
   $("#saveDraftBtn").on("click", function () {
-    alert("Draft saved successfully!");
+    flashButton($(this), '<i class="ti-check"></i> Saved');
+    showToast("Draft saved successfully.", "success");
   });
   $("#reviewForm").on("submit", function (e) {
     e.preventDefault();
     if (!$('input[name="decision"]:checked').length) {
-      alert("Please select a recommendation before submitting.");
+      showToast("Please select a recommendation before submitting.", "warning", 3200);
       return;
     }
-    alert("Review submitted successfully! Thank you for your evaluation.");
+    flashButton($(this).find('button[type="submit"]').first(), '<i class="ti-check"></i> Submitted');
+    showToast("Review submitted successfully. Thank you for your evaluation.", "success", 3200);
   });
   $("#contactForm").on("submit", function (e) {
     e.preventDefault();
-    alert("Message sent! We will get back to you within 1-2 business days.");
+    flashButton($(this).find('button[type="submit"]').first(), '<i class="ti-check"></i> Sent');
+    showToast("Message sent. We will get back to you within 1-2 business days.", "success", 3200);
   });
+
+  // ========================================
+  // Startup hooks
+  // ========================================
+  ensureSkipLink();
+  applyActiveNavState();
+  initScrollTopButton();
+
+  window.IJID = window.IJID || {};
+  window.IJID.toast = showToast;
 
   // ========================================
   // Utility: Format file size
